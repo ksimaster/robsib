@@ -1,0 +1,583 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.16f1 (049d6eca3c44) revision 302446'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 7  (6.1.0) 64bit' Language: 'ru' Physical Memory: 8075 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/kycaka/Documents/GitHub/drovogrelka/Drovogrel
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59981
+Successfully changed project path to: C:/Users/kycaka/Documents/GitHub/drovogrelka/Drovogrel
+C:/Users/kycaka/Documents/GitHub/drovogrelka/Drovogrel
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 55.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.16f1 (049d6eca3c44)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/kycaka/Documents/GitHub/drovogrelka/Drovogrel/Assets
+GfxDevice: creating device client; threaded=0
+d3d11: CreateDXGIFactory2(...) not found, fallbacking to CreateDXGIFactory1(...).
+d3d11: QueryInterface(IDXGIFactory5) failed (80004002).
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Vendor:   
+    VRAM:     2977 MB
+    Driver:   27.21.14.6140
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004193 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 60.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.632 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3632ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (523ms)
+			LoadAssemblies (146ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (228ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (188ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (60ms)
+				BeforeProcessingInitializeOnLoad (9ms)
+				ProcessInitializeOnLoadAttributes (82ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.013678 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.279 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1280ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1081ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (327ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (441ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (349ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1666 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 168.8 MB.
+System memory in use after: 168.9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2143.
+Total: 4.384300 ms (FindLiveObjects: 0.208221 ms CreateObjectMapping: 0.075120 ms MarkObjects: 3.985727 ms  DeleteObjects: 0.114138 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/martian-rover-thoth/source/MarsRover_Manipulator_Arm_PreviewMesh.fbx
+  artifactKey: Guid(a2baf30a463ccc648ab13c051b00abd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/source/MarsRover_Manipulator_Arm_PreviewMesh.fbx using Guid(a2baf30a463ccc648ab13c051b00abd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a8fe3ab087351a1ef4cbd584f95770') in 0.283685 seconds 
+  Import took 0.288981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/martian-rover-thoth/source/MarsRider.FBX
+  artifactKey: Guid(9247c4cc93e925141b7356cbe8c66d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/source/MarsRider.FBX using Guid(9247c4cc93e925141b7356cbe8c66d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d4e2e684e9df181e55951262aa3a1c') in 0.090154 seconds 
+  Import took 0.094479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/martian-rover-thoth
+  artifactKey: Guid(6217022ff54bf8541a9ce957860fbbdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth using Guid(6217022ff54bf8541a9ce957860fbbdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a46af74662cffdba883e0b3a427b326') in 0.001340 seconds 
+  Import took 0.007019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/martian-rover-thoth/source/MarsRover_Wheels_PreviewMesh.fbx
+  artifactKey: Guid(5cb5e777cdbae6d428b15937729c9c87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/source/MarsRover_Wheels_PreviewMesh.fbx using Guid(5cb5e777cdbae6d428b15937729c9c87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d42ee155849d179cda473de43ae94a') in 0.083019 seconds 
+  Import took 0.088264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/martian-rover-thoth/source
+  artifactKey: Guid(bb723ee35e9d52846871d18b844d56a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/source using Guid(bb723ee35e9d52846871d18b844d56a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b939f100322c6b56c8817f14a38fa7d1') in 0.001953 seconds 
+  Import took 0.005478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/martian-rover-thoth/source/MarsRover_MainEye_PreviewMesh.fbx
+  artifactKey: Guid(c916e946e35afee42a972736b638ade9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/source/MarsRover_MainEye_PreviewMesh.fbx using Guid(c916e946e35afee42a972736b638ade9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e1293ed9ecd5eb2519f13c736b3f6a') in 0.075480 seconds 
+  Import took 0.079758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.916673 seconds.
+  path: Assets/martian-rover-thoth/textures
+  artifactKey: Guid(76b0a807d9625fd45acb508919609027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures using Guid(76b0a807d9625fd45acb508919609027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5473aa8f0f9ee3b7f2af5fc187fa469') in 0.001928 seconds 
+  Import took 0.005722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.054316 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Arm_BaseColor.png
+  artifactKey: Guid(e15859b0d34f8534dbc8c11bc1f4419c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Arm_BaseColor.png using Guid(e15859b0d34f8534dbc8c11bc1f4419c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e3308705704fae2d86ae5815e7bead6') in 0.018799 seconds 
+  Import took 0.022725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_BaseColor.png
+  artifactKey: Guid(5e2c061933a070b4b86129a2a7e74b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_BaseColor.png using Guid(5e2c061933a070b4b86129a2a7e74b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '195de0f21565609a166c43813623c6b4') in 0.010891 seconds 
+  Import took 0.015316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_BaseColor.png
+  artifactKey: Guid(5f55e4dc883997f4e82b923f27c46367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_BaseColor.png using Guid(5f55e4dc883997f4e82b923f27c46367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f009d8663d46e01d773c10fa27186b38') in 0.009068 seconds 
+  Import took 0.012982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_Normal.png
+  artifactKey: Guid(607b7d82d51c02e4abea4281d1512efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_Normal.png using Guid(607b7d82d51c02e4abea4281d1512efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2311af777a553ce5afbc910f2d8907') in 0.007905 seconds 
+  Import took 0.012684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Devices_BaseColor.png
+  artifactKey: Guid(a71843a16b565a944ba069c049962462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Devices_BaseColor.png using Guid(a71843a16b565a944ba069c049962462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2644b2390cf18e7f39adc27236d50a') in 0.009918 seconds 
+  Import took 0.014303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Normal.png
+  artifactKey: Guid(0dd83d620bfed9445bcbc1a927702d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Normal.png using Guid(0dd83d620bfed9445bcbc1a927702d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29126ad7457b78e939dd29dabdbcbe94') in 0.006883 seconds 
+  Import took 0.011220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Devices_Metallic.png
+  artifactKey: Guid(05d8cbaeb0bdd564db5e40db8be32d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Devices_Metallic.png using Guid(05d8cbaeb0bdd564db5e40db8be32d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dceec55fdb54901c2f389c1084e04fe') in 0.014406 seconds 
+  Import took 0.019421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Roughness.png
+  artifactKey: Guid(a334293017089a547980b71e46d9f4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Roughness.png using Guid(a334293017089a547980b71e46d9f4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a11c5b1fab3b9eb01ad22e12edfeb88') in 0.007030 seconds 
+  Import took 0.012902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Emissive.png
+  artifactKey: Guid(866752f241bda7e4e8a56e5150eed991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Emissive.png using Guid(866752f241bda7e4e8a56e5150eed991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f78d65c28a9f0a4bf7a8c91a7a26c1f3') in 0.008711 seconds 
+  Import took 0.012937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_AO.png
+  artifactKey: Guid(a2bdcdf2005ad6a42a1fb7c5bcab71cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_AO.png using Guid(a2bdcdf2005ad6a42a1fb7c5bcab71cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c19ee0d459928c5971f887bc3c0214') in 0.009387 seconds 
+  Import took 0.013495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Emissive.png
+  artifactKey: Guid(3128f6be6d6fc6844aef0a2f936fbbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Emissive.png using Guid(3128f6be6d6fc6844aef0a2f936fbbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e8d2705a049dec7a6578848c0592b2') in 0.006703 seconds 
+  Import took 0.012014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Metallic.png
+  artifactKey: Guid(e8c0bada368f1694d8453fb50e47ebfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Metallic.png using Guid(e8c0bada368f1694d8453fb50e47ebfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6ac2fbb0c52a890c4f2af112e868b0') in 0.008998 seconds 
+  Import took 0.013930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_Normal.png
+  artifactKey: Guid(03b97b5eda4614b4488a7acb0feddedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_Normal.png using Guid(03b97b5eda4614b4488a7acb0feddedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bddc34526804e673fd47862dbb611c47') in 0.007412 seconds 
+  Import took 0.012553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Normal.png
+  artifactKey: Guid(954aa116bd5ce614890d7b07b3373ffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Normal.png using Guid(954aa116bd5ce614890d7b07b3373ffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ed60a598bf40a40c240ccb3d69b7b0') in 0.006751 seconds 
+  Import took 0.010792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_Roughness.png
+  artifactKey: Guid(f4cb47e56fd13784c87815c466279b08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_Roughness.png using Guid(f4cb47e56fd13784c87815c466279b08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d3ad259425120d7593ec694db574e71') in 0.007241 seconds 
+  Import took 0.010948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Roughness.png
+  artifactKey: Guid(97ee072950ba15c4a930c4ea6b2e6afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Roughness.png using Guid(97ee072950ba15c4a930c4ea6b2e6afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f2721654d392c0525617f4bd779b1c') in 0.007939 seconds 
+  Import took 0.014594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Roughness.png
+  artifactKey: Guid(edfefd0c0087e164da793725db33d1d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Roughness.png using Guid(edfefd0c0087e164da793725db33d1d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3540b7398ef607a17f54bf7248963db5') in 0.006108 seconds 
+  Import took 0.009566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_Roughness.png
+  artifactKey: Guid(743fae445705be14bbf888cc097b31c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_Roughness.png using Guid(743fae445705be14bbf888cc097b31c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ffc282b2fa3a393a7549534bdaa31e') in 0.008216 seconds 
+  Import took 0.012147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Emissive.png
+  artifactKey: Guid(9d6f033e81f5ceb43bc250a766fed59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Emissive.png using Guid(9d6f033e81f5ceb43bc250a766fed59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee68b66bd93e6dc5c51ca8d6a687c130') in 0.005858 seconds 
+  Import took 0.009792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Metallic.png
+  artifactKey: Guid(80a697edc6263764b8dfd8272d96ac16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Metallic.png using Guid(80a697edc6263764b8dfd8272d96ac16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6af9158987a9482473dff7de8d35dc') in 0.006200 seconds 
+  Import took 0.009637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Devices_Emissive.png
+  artifactKey: Guid(492f718de54893a4099945d4c2d0ea5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Devices_Emissive.png using Guid(492f718de54893a4099945d4c2d0ea5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd231326942483b17cff9114e0a578dd0') in 0.008108 seconds 
+  Import took 0.013638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_Metallic.png
+  artifactKey: Guid(38adbc4e9abdaa64f911cb0143d38eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Right_Metallic.png using Guid(38adbc4e9abdaa64f911cb0143d38eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '872ac76ed4c3e3fabc05c2e5d9661068') in 0.006645 seconds 
+  Import took 0.010341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Arm_Metallic.png
+  artifactKey: Guid(4a88a42e2032e12439a3a79c9cae2a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Arm_Metallic.png using Guid(4a88a42e2032e12439a3a79c9cae2a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6620beea8ddd92c1d0bc8c6f277da996') in 0.008583 seconds 
+  Import took 0.012739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_BaseColor.png
+  artifactKey: Guid(0b4192ad80e6a62498d52c7d4b1d3e3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_BaseColor.png using Guid(0b4192ad80e6a62498d52c7d4b1d3e3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2c06f895758202ee179193af9a0f79') in 0.006963 seconds 
+  Import took 0.010920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_BaseColor.png
+  artifactKey: Guid(df1c99a80beb7df4c9eb3327f492677d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_BaseColor.png using Guid(df1c99a80beb7df4c9eb3327f492677d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b80deaf7d695baac14fce9194ead7dd') in 0.009701 seconds 
+  Import took 0.013493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_BaseColor.png
+  artifactKey: Guid(4d95bb7ba29d1f54a8c18f6f0f765f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_BaseColor.png using Guid(4d95bb7ba29d1f54a8c18f6f0f765f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c5fbc6b46043df7f530a98bdd98874e') in 0.007895 seconds 
+  Import took 0.011328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Metallic.png
+  artifactKey: Guid(f4bc7da3c5bde3948bac3488c71523bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Main_Eye_Metallic.png using Guid(f4bc7da3c5bde3948bac3488c71523bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7c0d1152edca16ce763cdca5dd5173') in 0.007944 seconds 
+  Import took 0.011593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Arm_Roughness.png
+  artifactKey: Guid(a7c519594800e5c408430ed0b4ab09bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Arm_Roughness.png using Guid(a7c519594800e5c408430ed0b4ab09bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2cfe701d3d1bc28908398eb5b024b35') in 0.006467 seconds 
+  Import took 0.009878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Normal.png
+  artifactKey: Guid(0421be604b5d21b4cb2c8690e85f3dcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Normal.png using Guid(0421be604b5d21b4cb2c8690e85f3dcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aa82a7ebe998306d5ac12d3026e5222') in 0.007585 seconds 
+  Import took 0.010733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Roughness.png
+  artifactKey: Guid(9713dcda67dc53e469f93bfc209cf581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_Roughness.png using Guid(9713dcda67dc53e469f93bfc209cf581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8774413404476bb7ba07ec2fe4ba354') in 0.007608 seconds 
+  Import took 0.013151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Arm_Emissive.png
+  artifactKey: Guid(ae3bccb6c6dab7d45b191344ba0f2692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Arm_Emissive.png using Guid(ae3bccb6c6dab7d45b191344ba0f2692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae3d3c93a7c1dda3ad62acfba71a4d34') in 0.006108 seconds 
+  Import took 0.009952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_BaseColor.png
+  artifactKey: Guid(6865ef211a65c4d448929c8e2f25bf03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_MarsRider_BaseColor.png using Guid(6865ef211a65c4d448929c8e2f25bf03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '202bcf39e35e2009c30d2fa82de5d94e') in 0.008281 seconds 
+  Import took 0.012590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Arm_Normal.png
+  artifactKey: Guid(2e784d77279be3f4e91539d6e479d3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Arm_Normal.png using Guid(2e784d77279be3f4e91539d6e479d3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a6c673419a7193100eb1c0f0e172f08') in 0.006917 seconds 
+  Import took 0.010738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Devices_Normal.png
+  artifactKey: Guid(8a660690c1298ed42a407ad6726af0f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Devices_Normal.png using Guid(8a660690c1298ed42a407ad6726af0f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed4632cffa35241cff2b6fc2dbf1f1f3') in 0.007994 seconds 
+  Import took 0.012977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_Metallic.png
+  artifactKey: Guid(df71e4b758c276b498856d01210be244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Left_Metallic.png using Guid(df71e4b758c276b498856d01210be244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecce22e0064e4cba523a904a43927f8c') in 0.006772 seconds 
+  Import took 0.010690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_AO.png
+  artifactKey: Guid(05fef6694240bc946846cb03dce40983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_AO.png using Guid(05fef6694240bc946846cb03dce40983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea35f3836d1cb159d49c1f3f37b61f83') in 0.006054 seconds 
+  Import took 0.009511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000343 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Normal.png
+  artifactKey: Guid(1453922722c7e774cb11c77090bb0bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Wheel_Rail_Normal.png using Guid(1453922722c7e774cb11c77090bb0bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b8c747e28ea9bcec96d53826a42dee') in 0.007247 seconds 
+  Import took 0.011536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Metallic.png
+  artifactKey: Guid(a6cb6030873ee1a46bd9ef3e5a0b49fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Metallic.png using Guid(a6cb6030873ee1a46bd9ef3e5a0b49fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ec93d23f016c32be2e0abe17b750684') in 0.005916 seconds 
+  Import took 0.010372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Devices_Roughness.png
+  artifactKey: Guid(73a2616b133ce9049b72e0722c10c180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Devices_Roughness.png using Guid(73a2616b133ce9049b72e0722c10c180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6a08407d1f7f3c94063f9fd1e9480de') in 0.011029 seconds 
+  Import took 0.014420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Emissive.png
+  artifactKey: Guid(a8cb85b2e1499d049b489d2670477cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/textures/Marsrider2_Power_Relay_Emissive.png using Guid(a8cb85b2e1499d049b489d2670477cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d00091dfea8713388ef50e1b462a9fa') in 0.005681 seconds 
+  Import took 0.009652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.425687 seconds.
+  path: Assets/martian-rover-thoth/source/SF.rar
+  artifactKey: Guid(afc1d267b140f9f4a888545566f7eab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian-rover-thoth/source/SF.rar using Guid(afc1d267b140f9f4a888545566f7eab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87f058be82f4dcd1cf2da785a8beab42') in 0.004143 seconds 
+  Import took 0.007724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 149.677360 seconds.
+  path: Assets/martian rover_3.obj
+  artifactKey: Guid(90ad7e0eaa5821e419b84785b37e92af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/martian rover_3.obj using Guid(90ad7e0eaa5821e419b84785b37e92af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abbca335442dc161ed994efd5bcd8b93') in 0.422101 seconds 
+  Import took 0.426142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.517396 seconds.
+  path: Assets/rover_color.png
+  artifactKey: Guid(36db0a796e89d84448cb3eaaf8612ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rover_color.png using Guid(36db0a796e89d84448cb3eaaf8612ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b6779613542e97456cafd9e5ffe434') in 0.014304 seconds 
+  Import took 0.019176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/rover_normal.png
+  artifactKey: Guid(ef00c5ef90e29ac4c8848ba7458a24a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rover_normal.png using Guid(ef00c5ef90e29ac4c8848ba7458a24a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2cf51e6c20ebde5d640c59cde4da7e6') in 0.012898 seconds 
+  Import took 0.016124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/rover_color.png
+  artifactKey: Guid(36db0a796e89d84448cb3eaaf8612ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rover_color.png using Guid(36db0a796e89d84448cb3eaaf8612ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b6779613542e97456cafd9e5ffe434') in 0.013443 seconds 
+  Import took 0.017398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/rover_roughness.png
+  artifactKey: Guid(1e2d0fbee5217e0448cdda9dbee615a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rover_roughness.png using Guid(1e2d0fbee5217e0448cdda9dbee615a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70fc10cd886a94212ce7dbfd64d310bd') in 0.013581 seconds 
+  Import took 0.017324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/rover_metalness.png
+  artifactKey: Guid(f71776eba8d3e424caca6f91e6d31f60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rover_metalness.png using Guid(f71776eba8d3e424caca6f91e6d31f60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d6ffffe259146a95b0599879090f22') in 0.014566 seconds 
+  Import took 0.019199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001255 seconds.
+  path: Assets/rover_roughness.png
+  artifactKey: Guid(1e2d0fbee5217e0448cdda9dbee615a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rover_roughness.png using Guid(1e2d0fbee5217e0448cdda9dbee615a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70fc10cd886a94212ce7dbfd64d310bd') in 0.011450 seconds 
+  Import took 0.016712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 125.681582 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(e23b56f4a1e158b4eb401da7d096f62d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(e23b56f4a1e158b4eb401da7d096f62d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703bc53113e37a1a03ebc12536cd54b1') in 0.001638 seconds 
+  Import took 0.005052 seconds .
+
