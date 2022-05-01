@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7926b7a61c4c36c429a5b1d847c80f9f, type: 3}
+  m_Name: CloseEnd_03
+  m_EditorClassIdentifier: 
+  _Windows:
+  - serializedVersion: 2
+    x: 96
+    y: 109
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 180
+    y: 52
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 300
+    y: 59
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 401
+    y: 119
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 420
+    y: 210
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 373
+    y: 276
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 395
+    y: 322
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 431
+    y: 361
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 456
+    y: 429
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 423
+    y: 488
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 327
+    y: 545
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 183
+    y: 532
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 121
+    y: 460
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 113
+    y: 340
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 51
+    y: 266
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 40
+    y: 184
+    width: 10
+    height: 10
+  _Positions:
+  - {x: 9.6, y: 0, z: 10.9}
+  - {x: 18, y: 0, z: 5.2}
+  - {x: 30, y: 0, z: 5.9}
+  - {x: 40.1, y: 0, z: 11.9}
+  - {x: 42, y: 0, z: 21}
+  - {x: 37.3, y: 0, z: 27.6}
+  - {x: 39.5, y: 0, z: 32.2}
+  - {x: 43.1, y: 0, z: 36.1}
+  - {x: 45.6, y: 0, z: 42.9}
+  - {x: 42.3, y: 0, z: 48.8}
+  - {x: 32.7, y: 0, z: 54.5}
+  - {x: 18.3, y: 0, z: 53.2}
+  - {x: 12.1, y: 0, z: 46}
+  - {x: 11.3, y: 0, z: 34}
+  - {x: 5.1, y: 0, z: 26.6}
+  - {x: 4, y: 0, z: 18.4}
+  _CloseEnd: 1

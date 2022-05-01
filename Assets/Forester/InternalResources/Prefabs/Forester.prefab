@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1353902980369856}
+  m_IsPrefabParent: 1
+--- !u!1 &1353902980369856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4966752088671292}
+  - component: {fileID: 114821394521184390}
+  m_Layer: 0
+  m_Name: Forester
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4966752088671292
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353902980369856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114821394521184390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353902980369856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9f0e93a3ad44a4abc36a05a4d8665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _AssetPath: 
+  _ForestController: {fileID: 0}
+  _Point: {fileID: 1867123083043266, guid: bb625ca271d268a419e37d43a5210645, type: 2}
+  _ForestPreset: {fileID: 0}
+  _AreaPreset: {fileID: 0}
+  _ForestHolder: {fileID: 0}
+  _ForestPrefab: {fileID: 1628017663901730, guid: c91a1a5a7a3db00459f2f676cffee1c6,
+    type: 2}
+  _Points: []
+  _ForestPresetName: 
+  _Center: {x: 0, y: 0, z: 0}
+  _FrozenObjects: []
+  _Distances: []
+  _Distance: []
+  _MaxDist: []
+  _IncludeGroup: 
+  _ForestGroup: []
+  _CreatedObjects: []
+  _DistanceBetween: []
+  _BorderOffset: 2
+  _WorldHeight: 400
+  _ClosedEnd: 1
+  _Progress: 0
+  _ShowProgressBar: 1
+  legacyUpdate: 0

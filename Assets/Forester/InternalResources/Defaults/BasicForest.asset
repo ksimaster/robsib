@@ -1,0 +1,461 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afd4e79fd986ba45a597c7d466ad04a, type: 3}
+  m_Name: BasicForest
+  m_EditorClassIdentifier: 
+  _ForestGroup:
+  - _Icon: {fileID: 2800000, guid: cadcb42199f7e204c85bdd337350a838, type: 3}
+    _GroupName: Trees
+    _MinOffset: 0.01
+    _MaxOffset: 5
+    _Offset: 5
+    _Fill: 100
+    _MinBorderOffset: 0.01
+    _MaxBorderOffset: 1
+    _BorderOffset: 1
+    _MinDigDepth: 0
+    _MaxDigDepth: 1
+    _DigDepth: 0.05357143
+    _FaceBorderDirection: 0
+    _RandomRotation: 1
+    _MinRotation: 0
+    _MaxRotation: 360
+    _RandomScale: 1
+    _MinScale: 1
+    _MaxScale: 1.25
+    _MinAngleLimit: 0
+    _MaxAngleLimit: 90
+    _AngleLimit: 45
+    _FaceNormals: 0
+    _HasParticles: 0
+    _TagIndex: 0
+    _Overlap: 0
+    _MinOverlapDistance: 0
+    _MaxOverlapDistance: 10
+    _OverlapDistance: 5.4545455
+    _MinPaintFreq: 0
+    _MaxPaintFreq: 1
+    _PaintFreq: 0.5
+    _UniqueID: 1
+    _TargetTextures: []
+    _StencilMaskState: 
+    _StencilExcludeState: 0
+    _CreatedObjectIndex: -1
+    _FoliageObjects:
+    - _FoliageObject: {fileID: 1893281658692348, guid: f6788566135bcd4499a10dd6e18bbe02, type: 3}
+      _ParticleSystem: {fileID: 198550551955234128, guid: 2f134830254eaba4794b95bd009817a6, type: 3}
+      _ParticleSystemHeight: 0.5
+      _SatelliteObjects:
+      - _Object: {fileID: 1970348959976782, guid: 7abc4d620bf7db84c8b503a103cd7612, type: 3}
+        _MaxNum: 5
+        _FaceNormals: 1
+        _Rotation: 1
+        _Scale: 1
+        _MinScale: 0.5
+        _MaxScale: 1
+        _Hover: 0
+        _YPos: 0
+        _SatelliteSpread: 2
+    _OffsetOverDistance: []
+    _OffsetOverDist:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 7.6
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 25
+        value: 7.6
+        inSlope: -0
+        outSlope: 3.2999997
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 26
+        value: 10.9
+        inSlope: 3.2999997
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 50
+        value: 10.9
+        inSlope: -0
+        outSlope: 7.92
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 51
+        value: 18.82
+        inSlope: 7.92
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 18.82
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _TerrainStamping:
+      _AllowStamping: 0
+      _TerrainTex: {fileID: 2800000, guid: 6ec06752a205cba4a9930ac791a47247, type: 3}
+      _StampTex: {fileID: 2800000, guid: d89d3373db6c9b04c8360fe6ffad14b8, type: 3}
+      _StampSize: 7
+      _StampOpacity: 100
+      _TileSize: {x: 15, y: 15}
+      _AllowStampOverlap: 1
+      _AllowHeight: 0
+      _StampTexHeight: {fileID: 2800000, guid: 330b85f43c40bb54fb76fd9ccefb55f0, type: 3}
+      _StampSizeHeight: 5
+      _MinHeightStrength: 0.75
+      _MaxHeightStrength: 1.25
+  - _Icon: {fileID: 2800000, guid: 47f1bec256a9727428667dcd82835d5b, type: 3}
+    _GroupName: Shrubs
+    _MinOffset: 0.01
+    _MaxOffset: 1
+    _Offset: 1
+    _Fill: 100
+    _MinBorderOffset: 0.01
+    _MaxBorderOffset: 1
+    _BorderOffset: 1
+    _MinDigDepth: 0
+    _MaxDigDepth: 1
+    _DigDepth: 0.05357143
+    _FaceBorderDirection: 0
+    _RandomRotation: 1
+    _MinRotation: 0
+    _MaxRotation: 360
+    _RandomScale: 1
+    _MinScale: 1
+    _MaxScale: 1.25
+    _MinAngleLimit: 0
+    _MaxAngleLimit: 90
+    _AngleLimit: 70
+    _FaceNormals: 1
+    _HasParticles: 0
+    _TagIndex: 0
+    _Overlap: 0
+    _MinOverlapDistance: 0
+    _MaxOverlapDistance: 5
+    _OverlapDistance: 0.5
+    _MinPaintFreq: 0
+    _MaxPaintFreq: 1
+    _PaintFreq: 0.5
+    _UniqueID: 2
+    _TargetTextures: []
+    _StencilMaskState: 
+    _StencilExcludeState: 0
+    _CreatedObjectIndex: -1
+    _FoliageObjects:
+    - _FoliageObject: {fileID: 1830642388656762, guid: 5d046f604507b9b4596ab18e06a47bb4, type: 3}
+      _ParticleSystem: {fileID: 0}
+      _ParticleSystemHeight: 0
+      _SatelliteObjects: []
+    _OffsetOverDistance: []
+    _OffsetOverDist:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 5.4347835
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 5.4347835
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _TerrainStamping:
+      _AllowStamping: 0
+      _TerrainTex: {fileID: 0}
+      _StampTex: {fileID: 0}
+      _StampSize: 5
+      _StampOpacity: 100
+      _TileSize: {x: 15, y: 15}
+      _AllowStampOverlap: 1
+      _AllowHeight: 0
+      _StampTexHeight: {fileID: 0}
+      _StampSizeHeight: 5
+      _MinHeightStrength: 0
+      _MaxHeightStrength: 1
+  - _Icon: {fileID: 2800000, guid: 68bbe4edbfd4eae4a92c4739ec06164a, type: 3}
+    _GroupName: Rocks
+    _MinOffset: 0.01
+    _MaxOffset: 5
+    _Offset: 0.58059824
+    _Fill: 100
+    _MinBorderOffset: 0.01
+    _MaxBorderOffset: 5
+    _BorderOffset: 5
+    _MinDigDepth: 0
+    _MaxDigDepth: 1
+    _DigDepth: 0.14285715
+    _FaceBorderDirection: 0
+    _RandomRotation: 1
+    _MinRotation: 0
+    _MaxRotation: 360
+    _RandomScale: 1
+    _MinScale: 0.5
+    _MaxScale: 1
+    _MinAngleLimit: 0
+    _MaxAngleLimit: 90
+    _AngleLimit: 38
+    _FaceNormals: 1
+    _HasParticles: 0
+    _TagIndex: 0
+    _Overlap: 1
+    _MinOverlapDistance: 0
+    _MaxOverlapDistance: 5
+    _OverlapDistance: 5
+    _MinPaintFreq: 0
+    _MaxPaintFreq: 1
+    _PaintFreq: 0.5
+    _UniqueID: 3
+    _TargetTextures: []
+    _StencilMaskState: 
+    _StencilExcludeState: 0
+    _CreatedObjectIndex: -1
+    _FoliageObjects:
+    - _FoliageObject: {fileID: 1116598871425484, guid: 4dcd0c897c0022c45b9d22806525ac9f, type: 3}
+      _ParticleSystem: {fileID: 0}
+      _ParticleSystemHeight: 0
+      _SatelliteObjects: []
+    _OffsetOverDistance: []
+    _OffsetOverDist:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 10
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _TerrainStamping:
+      _AllowStamping: 0
+      _TerrainTex: {fileID: 0}
+      _StampTex: {fileID: 0}
+      _StampSize: 5
+      _StampOpacity: 100
+      _TileSize: {x: 15, y: 15}
+      _AllowStampOverlap: 1
+      _AllowHeight: 0
+      _StampTexHeight: {fileID: 0}
+      _StampSizeHeight: 5
+      _MinHeightStrength: 0
+      _MaxHeightStrength: 1
+  - _Icon: {fileID: 2800000, guid: 47f1bec256a9727428667dcd82835d5b, type: 3}
+    _GroupName: Grass
+    _MinOffset: 0.01
+    _MaxOffset: 1
+    _Offset: 1
+    _Fill: 50
+    _MinBorderOffset: 0.01
+    _MaxBorderOffset: 1
+    _BorderOffset: 1
+    _MinDigDepth: 0
+    _MaxDigDepth: 1
+    _DigDepth: 0
+    _FaceBorderDirection: 0
+    _RandomRotation: 1
+    _MinRotation: 0
+    _MaxRotation: 360
+    _RandomScale: 0
+    _MinScale: 0.9
+    _MaxScale: 1
+    _MinAngleLimit: 0
+    _MaxAngleLimit: 90
+    _AngleLimit: 0
+    _FaceNormals: 1
+    _HasParticles: 0
+    _TagIndex: 0
+    _Overlap: 1
+    _MinOverlapDistance: 0
+    _MaxOverlapDistance: 5
+    _OverlapDistance: 5
+    _MinPaintFreq: 0
+    _MaxPaintFreq: 1
+    _PaintFreq: 0.5
+    _UniqueID: 4
+    _TargetTextures: []
+    _StencilMaskState: 
+    _StencilExcludeState: 0
+    _CreatedObjectIndex: -1
+    _FoliageObjects:
+    - _FoliageObject: {fileID: 1881341821242908, guid: 931d69bf3d397ad46b8daf2f06d3128b, type: 3}
+      _ParticleSystem: {fileID: 0}
+      _ParticleSystemHeight: 0
+      _SatelliteObjects: []
+    _OffsetOverDistance: []
+    _OffsetOverDist:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 10
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _TerrainStamping:
+      _AllowStamping: 0
+      _TerrainTex: {fileID: 0}
+      _StampTex: {fileID: 0}
+      _StampSize: 5
+      _StampOpacity: 100
+      _TileSize: {x: 15, y: 15}
+      _AllowStampOverlap: 1
+      _AllowHeight: 0
+      _StampTexHeight: {fileID: 0}
+      _StampSizeHeight: 5
+      _MinHeightStrength: 0
+      _MaxHeightStrength: 1
+  - _Icon: {fileID: 2800000, guid: c5735e8a70eb09a4c9b7a2846c7f4df3, type: 3}
+    _GroupName: Hedge
+    _MinOffset: 0.01
+    _MaxOffset: 1
+    _Offset: 1
+    _Fill: 100
+    _MinBorderOffset: 0.01
+    _MaxBorderOffset: 1
+    _BorderOffset: 1
+    _MinDigDepth: 0
+    _MaxDigDepth: 1
+    _DigDepth: 0
+    _FaceBorderDirection: 1
+    _RandomRotation: 0
+    _MinRotation: 0
+    _MaxRotation: 360
+    _RandomScale: 0
+    _MinScale: 0.5
+    _MaxScale: 1
+    _MinAngleLimit: 0
+    _MaxAngleLimit: 90
+    _AngleLimit: 0
+    _FaceNormals: 0
+    _HasParticles: 0
+    _TagIndex: 0
+    _Overlap: 1
+    _MinOverlapDistance: 0
+    _MaxOverlapDistance: 5
+    _OverlapDistance: 5
+    _MinPaintFreq: 0
+    _MaxPaintFreq: 1
+    _PaintFreq: 0.5
+    _UniqueID: 5
+    _TargetTextures: []
+    _StencilMaskState: 
+    _StencilExcludeState: 0
+    _CreatedObjectIndex: -1
+    _FoliageObjects:
+    - _FoliageObject: {fileID: 1304541003494024, guid: fb43d65701712ea49b5412588c474125, type: 3}
+      _ParticleSystem: {fileID: 0}
+      _ParticleSystemHeight: 0
+      _SatelliteObjects: []
+    _OffsetOverDistance: []
+    _OffsetOverDist:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 10
+        inSlope: -0
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _TerrainStamping:
+      _AllowStamping: 0
+      _TerrainTex: {fileID: 0}
+      _StampTex: {fileID: 0}
+      _StampSize: 5
+      _StampOpacity: 100
+      _TileSize: {x: 15, y: 15}
+      _AllowStampOverlap: 1
+      _AllowHeight: 0
+      _StampTexHeight: {fileID: 0}
+      _StampSizeHeight: 5
+      _MinHeightStrength: 0
+      _MaxHeightStrength: 1

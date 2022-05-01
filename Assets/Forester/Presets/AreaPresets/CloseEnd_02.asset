@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7926b7a61c4c36c429a5b1d847c80f9f, type: 3}
+  m_Name: CloseEnd_02
+  m_EditorClassIdentifier: 
+  _Windows:
+  - serializedVersion: 2
+    x: 168
+    y: 156
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 376
+    y: 100
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 515
+    y: 165
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 466
+    y: 315
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 502
+    y: 472
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 327
+    y: 537
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 126
+    y: 502
+    width: 10
+    height: 10
+  - serializedVersion: 2
+    x: 75
+    y: 323
+    width: 10
+    height: 10
+  _Positions:
+  - {x: 16.8, y: 0, z: 15.6}
+  - {x: 37.6, y: 0, z: 10}
+  - {x: 51.5, y: 0, z: 16.5}
+  - {x: 46.6, y: 0, z: 31.5}
+  - {x: 50.2, y: 0, z: 47.2}
+  - {x: 32.7, y: 0, z: 53.7}
+  - {x: 12.6, y: 0, z: 50.2}
+  - {x: 7.5, y: 0, z: 32.3}
+  _CloseEnd: 1

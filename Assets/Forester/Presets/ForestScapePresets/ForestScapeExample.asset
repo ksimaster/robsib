@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f770a377ba191f48b5d9ba8dc2c12f0, type: 3}
+  m_Name: ForestScapeExample
+  m_EditorClassIdentifier: 
+  _AreaInclude: 
+  _ForestInclude: 
+  _DensityRandom: 0
+  _OffsetRandom: 0
+  _OverlapFoliage: 1
+  _MinFill: 0
+  _MaxFill: 3
+  _Fill: 2.3376625
+  _MinOffset: 0
+  _MaxOffset: 30
+  _Offset: 19.87013
+  _MinRotation: 0
+  _MaxRotation: 360
+  _Rotation: 261.81818
+  _MinScale: 1
+  _MaxScale: 1.5
+  _Scale: 1
+  _AreaPresets:
+  - _AreaPreset: {fileID: 11400000, guid: 0c80d0808bf58824988d1c8553d84183, type: 2}
+    _Include: 1
+  - _AreaPreset: {fileID: 11400000, guid: 41eb6832fcacb8140b6f9978690401a1, type: 2}
+    _Include: 1
+  - _AreaPreset: {fileID: 11400000, guid: fe0f8a01e503faf48b4b2cb85543ed07, type: 2}
+    _Include: 1
+  - _AreaPreset: {fileID: 11400000, guid: d7aaa9dc038e9c14cb16ee5b8e617c3f, type: 2}
+    _Include: 1
+  - _AreaPreset: {fileID: 11400000, guid: 5da60df809b71ad4d8c47e6733e67680, type: 2}
+    _Include: 1
+  - _AreaPreset: {fileID: 11400000, guid: b1b59a1b45e675b41b50148566925bc2, type: 2}
+    _Include: 1
+  _ForestPresets:
+  - _ForestPreset: {fileID: 11400000, guid: 9c710cdf1977aaf4a991d170dc7e98b1, type: 2}
+    _Include: 1
+  _TargetTexture: []
