@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Import/RPG_FPS_game_assets_industrial/Map_v1.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
