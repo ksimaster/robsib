@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fire
   - Log
+  - Ore
+  - Tree
   layers:
   - Default
   - TransparentFX
