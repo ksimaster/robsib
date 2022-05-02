@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fire
+  - Log
   layers:
   - Default
   - TransparentFX
@@ -34,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Postprocessing
   - 
   - 
   m_SortingLayers:
