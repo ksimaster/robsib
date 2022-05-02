@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwitchCamScript : MonoBehaviour
 {
     public Camera cam1;
-    public GameObject[] points = new GameObject[4];
+    public GameObject[] points = new GameObject[8];
     private int i = 1;
     
 
@@ -16,7 +16,7 @@ public class SwitchCamScript : MonoBehaviour
             PointCamera(points[i]);
             Debug.Log("Включена камера " + i);
             i++;
-            if (i > 3) i = 0; 
+            if (i > 7) i = 0; 
         }
     }
 
