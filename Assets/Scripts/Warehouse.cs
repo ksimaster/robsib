@@ -23,7 +23,15 @@ public class Warehouse : MonoBehaviour
         //тоже самое, через цикл и с возможность работать без вывода на экран
         for (int i=0; i<countResources.Length; i++) 
         {
-            countResources[i] = PlayerPrefs.GetInt(nameResources[i]);
+            if(countResources.Length == 1)
+            {
+                countResources[i] = PlayerPrefs.GetInt(gameObject.name);
+            }
+            else
+            {
+                countResources[i] = PlayerPrefs.GetInt(nameResources[i]);
+            }
+            
            // Debug.Log("«агрузили переменную: " + countResources[i]);
             if (textCountResources.Length > 0)
             {

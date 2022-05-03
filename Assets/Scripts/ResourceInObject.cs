@@ -8,11 +8,12 @@ public class ResourceInObject : MonoBehaviour
     
     private int countResourceInObject;
     public float minCount, maxCount;
-    public string nameResource;
+    private string nameResource;
     public Button collectButton;
 
     private void Start()
     {
+        nameResource = gameObject.name;
         countResourceInObject = Mathf.RoundToInt(Random.Range(minCount, maxCount));
         Debug.Log(countResourceInObject);
         PlayerPrefs.SetInt(nameResource, countResourceInObject);
