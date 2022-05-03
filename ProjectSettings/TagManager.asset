@@ -8,6 +8,7 @@ TagManager:
   - Log
   - Ore
   - Tree
+  - Home
   layers:
   - Default
   - TransparentFX

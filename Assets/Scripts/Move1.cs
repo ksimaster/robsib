@@ -64,7 +64,7 @@ public class Move1 : MonoBehaviour
         //поворот персонажа
         if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
         {
-            Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
+            Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove*Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(direct);
         }
 
