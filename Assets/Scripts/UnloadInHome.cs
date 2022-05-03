@@ -14,7 +14,11 @@ public class UnloadInHome : MonoBehaviour
 
     //private string fuel = "Fuel";
     private float fuelCount;
-    
+    private float fuelExpenses = 4;
+
+    public Slider sliderOut;
+
+
 
     private void OnCollisionEnter(Collision col)
     {
@@ -28,10 +32,13 @@ public class UnloadInHome : MonoBehaviour
                 PlayerPrefs.SetInt(nameHomeResources[i], countCarResources[i] + countHomeResources[i]); // записываем в преф склада переменную равную сумме переменных склада и плэера 
                 //textCountResource[i].text = countResources[i].ToString();
             }
-           /* fuelCount = PlayerPrefs.GetFloat("Fuel");
-            PlayerPrefs.SetFloat("Fuel", fuelCount - fuelExpenses); */
+            fuelCount = PlayerPrefs.GetFloat("Fuel");
+            sliderOut.value = fuelCount - fuelExpenses;
+            PlayerPrefs.SetFloat("Fuel", sliderOut.value);
+            Debug.Log("ПРИ ЗАЕЗДЕ УМЕНЬШИЛИ ПЕРЕМЕННУЮ FUEL в Pref");
+
             
-        }
+}
     }
 
 }

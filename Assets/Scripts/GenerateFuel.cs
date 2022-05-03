@@ -9,7 +9,7 @@ public class GenerateFuel : MonoBehaviour
     public float generateValue;
     public string nameResource;
     public float timeOut;
-    public float fuel;
+    private float fuel;
     // public float behindMax;
 
     private int countResource;
@@ -17,7 +17,7 @@ public class GenerateFuel : MonoBehaviour
     private float timer = 0.0f;
     private float waitTime = 2.0f;
 
-    public float fuelExpenses;
+   // public float fuelExpenses;
 
     private void Awake()
     {
@@ -47,7 +47,8 @@ public class GenerateFuel : MonoBehaviour
     {
         countResource--;
         PlayerPrefs.SetInt(nameResource, countResource);
-        sliderObject.value = sliderObject.value + generateValue;// - fuelExpenses;
+        sliderObject.value = sliderObject.value + generateValue;
+        PlayerPrefs.SetFloat("Fuel", sliderObject.value);
 
 
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SliderOut : MonoBehaviour
+public class SliderFuel : MonoBehaviour
 {
     public Slider sliderOut;
     public Text sliderText;
@@ -15,7 +15,7 @@ public class SliderOut : MonoBehaviour
     private void Awake()
     {
         sliderOut.value = sliderOut.maxValue - behindMax;
-        PlayerPrefs.SetFloat(nameValue, sliderOut.value);
+        PlayerPrefs.SetFloat("Fuel", sliderOut.value);
     }
     private void Start()
     {
@@ -28,7 +28,9 @@ public class SliderOut : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
         sliderOut.value -= speedFrost;
+        PlayerPrefs.SetFloat("Fuel", sliderOut.value);
 
         if (sliderOut.value <= deadValue) Debug.Log("Михалыч погиб! Вы проиграли!");
         

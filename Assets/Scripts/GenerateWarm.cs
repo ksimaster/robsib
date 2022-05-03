@@ -9,7 +9,7 @@ public class GenerateWarm : MonoBehaviour
     public float generateValue;
     public string nameResource;
     public float timeOut;
-    public float fuel;
+    private float fuel;
     // public float behindMax;
 
     private int countResource;
@@ -17,19 +17,16 @@ public class GenerateWarm : MonoBehaviour
     private float timer = 0.0f;
     private float waitTime = 2.0f;
 
-    public float fuelExpenses;
+    //public float warmExpenses;
 
     private void Awake()
     {
-        PlayerPrefs.SetInt(nameResource, 1);
+       // PlayerPrefs.SetInt(nameResource, 1);
 
     }
     private void Start()
     {
-       
         //countResource = PlayerPrefs.GetInt(nameResource);
-        
-
     }
     private void FixedUpdate()
     {
@@ -48,24 +45,8 @@ public class GenerateWarm : MonoBehaviour
         countResource--;
         PlayerPrefs.SetInt(nameResource, countResource);
         sliderObject.value = sliderObject.value + generateValue;
-        if (sliderObject.name == "SliderFuel") 
-        {
-            fuel = sliderObject.value;
-        }
-        else
-        {
-            fuel = PlayerPrefs.GetFloat("Fuel");
-        }
-        fuel -= fuelExpenses;
-        PlayerPrefs.SetFloat("Fuel", fuel);
-        if (sliderObject.name == "SliderFuel")
-        {
-            sliderObject.value = fuel;
-        }
-        else
-        {
-            PlayerPrefs.SetFloat("Fuel", fuel);
-        }
+        fuel = PlayerPrefs.GetFloat("Fuel");  
+        PlayerPrefs.SetFloat("Fuel", fuel-generateValue);
 
     }
 

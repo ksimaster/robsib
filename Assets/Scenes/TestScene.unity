@@ -2040,7 +2040,7 @@ MonoBehaviour:
   speedFrost: 0.005
   behindMax: 7
   deadValue: -200
-  nameValue: 
+  nameValue: Out
 --- !u!1001 &1128889607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2495,8 +2495,6 @@ MonoBehaviour:
   generateValue: 5
   nameResource: TreeHome
   timeOut: 5
-  fuel: 0
-  fuelExpenses: 3
 --- !u!114 &1390353126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3773875143915326967, guid: a7eeb562e2cf1464f975b45ed9eead4f,
@@ -2678,8 +2676,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1540298429}
   - component: {fileID: 1540298431}
-  - component: {fileID: 1540298430}
   - component: {fileID: 1540298432}
+  - component: {fileID: 1540298430}
   m_Layer: 5
   m_Name: SliderFuel
   m_TagString: Untagged
@@ -2720,7 +2718,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540298428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706fac9397b075649ab4be8195a9144b, type: 3}
+  m_Script: {fileID: 11500000, guid: 664bb3671f1e97e489ae1e9ccd8b27fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sliderOut: {fileID: 1540298431}
@@ -2796,7 +2794,6 @@ MonoBehaviour:
   generateValue: 5
   nameResource: OreHome
   timeOut: 5
-  fuel: 0
   fuelExpenses: 3
 --- !u!1 &1580603371
 GameObject:
@@ -4353,6 +4350,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1311512828, guid: 4391034cac6d8dd4ebc3a0da72a622ad, type: 3}
+      propertyPath: sliderOut
+      value: 
+      objectReference: {fileID: 1540298431}
     - target: {fileID: 8825344795924887511, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
         type: 3}
       propertyPath: m_Name
