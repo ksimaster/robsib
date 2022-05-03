@@ -259,3 +259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homeTag: Home
+  countCarResources: 0000000000000000
+  countHomeResources: 0000000000000000
+  fuelExpenses: 15

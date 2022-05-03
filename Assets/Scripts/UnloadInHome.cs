@@ -12,6 +12,10 @@ public class UnloadInHome : MonoBehaviour
     private string[] nameCarResources = { "TreeCar", "OreCar" };
     private string[] nameHomeResources = { "TreeHome", "OreHome" };
 
+    //private string fuel = "Fuel";
+    private float fuelCount;
+    
+
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag(homeTag))
@@ -23,7 +27,10 @@ public class UnloadInHome : MonoBehaviour
                 PlayerPrefs.SetInt(nameCarResources[i], 0); //обнуляем переменную в префе плэеера
                 PlayerPrefs.SetInt(nameHomeResources[i], countCarResources[i] + countHomeResources[i]); // записываем в преф склада переменную равную сумме переменных склада и плэера 
                 //textCountResource[i].text = countResources[i].ToString();
-            } 
+            }
+           /* fuelCount = PlayerPrefs.GetFloat("Fuel");
+            PlayerPrefs.SetFloat("Fuel", fuelCount - fuelExpenses); */
+            
         }
     }
 
