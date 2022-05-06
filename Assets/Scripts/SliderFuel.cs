@@ -11,6 +11,7 @@ public class SliderFuel : MonoBehaviour
     public float behindMax;
     public float deadValue;
     public string nameValue;
+    public GameObject PanelDead;
 
     private void Awake()
     {
@@ -32,8 +33,8 @@ public class SliderFuel : MonoBehaviour
         sliderOut.value -= speedFrost;
         PlayerPrefs.SetFloat("Fuel", sliderOut.value);
 
-        if (sliderOut.value <= deadValue) Debug.Log("Михалыч погиб! Вы проиграли!");
-        
+        if (sliderOut.value <= deadValue) PanelDead.SetActive(true);
+
     }
 
 }

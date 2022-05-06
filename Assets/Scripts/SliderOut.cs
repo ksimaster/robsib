@@ -11,6 +11,7 @@ public class SliderOut : MonoBehaviour
     public float behindMax;
     public float deadValue;
     public string nameValue;
+    public GameObject PanelDead;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class SliderOut : MonoBehaviour
     {
         sliderOut.value -= speedFrost;
 
-        if (sliderOut.value <= deadValue) Debug.Log("Михалыч погиб! Вы проиграли!");
+        if (sliderOut.value <= deadValue) PanelDead.SetActive(true);
         
     }
 
