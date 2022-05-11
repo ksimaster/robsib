@@ -1839,6 +1839,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019662070}
   m_CullTransparentMesh: 1
+--- !u!1001 &1057908436
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1311512828, guid: 4391034cac6d8dd4ebc3a0da72a622ad, type: 3}
+      propertyPath: sliderOut
+      value: 
+      objectReference: {fileID: 1540298431}
+    - target: {fileID: 8825344795924887511, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Player_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887515, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887516, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: collectFirstButton
+      value: 
+      objectReference: {fileID: 1390353126}
+    - target: {fileID: 8825344795924887516, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: collectSecondButton
+      value: 
+      objectReference: {fileID: 2134642130}
+    - target: {fileID: 8825344795924887518, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: textCountResources.Array.data[0]
+      value: 
+      objectReference: {fileID: 1763998587}
+    - target: {fileID: 8825344795924887518, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: textCountResources.Array.data[1]
+      value: 
+      objectReference: {fileID: 1750808073}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4391034cac6d8dd4ebc3a0da72a622ad, type: 3}
 --- !u!1 &1064534664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2134,7 @@ MonoBehaviour:
   behindMax: 7
   deadValue: -200
   nameValue: Out
+  PanelDead: {fileID: 0}
 --- !u!1001 &1128889607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2428,6 +2522,7 @@ MonoBehaviour:
   behindMax: 10
   deadValue: -100
   nameValue: Warm
+  PanelDead: {fileID: 0}
 --- !u!114 &1373722291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2727,6 +2822,7 @@ MonoBehaviour:
   behindMax: 50
   deadValue: 0
   nameValue: Fuel
+  PanelDead: {fileID: 0}
 --- !u!114 &1540298431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2794,7 +2890,6 @@ MonoBehaviour:
   generateValue: 5
   nameResource: OreHome
   timeOut: 5
-  fuelExpenses: 3
 --- !u!1 &1580603371
 GameObject:
   m_ObjectHideFlags: 0
