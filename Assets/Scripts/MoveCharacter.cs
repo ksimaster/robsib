@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class MoveCharacter : MonoBehaviour
 {
     public float speedMove;
    // public float jumpPower;
 
     private float gravityForce; // гравитация персонажа
     private Vector3 moveVector; // направление движения персонажа
-
+    private Vector3 current; 
     //Ссылки на компоненты
-    
+
     private CharacterController ch_controller;
     /*
     private Animator ch_animator;
@@ -20,6 +20,7 @@ public class Move : MonoBehaviour
 
     private void Start()
     {
+        gravityForce = 0f;
         
         ch_controller = GetComponent<CharacterController>();
         /*
@@ -30,18 +31,23 @@ public class Move : MonoBehaviour
     private void FixedUpdate()
     {
         CharacterMove();
-        GamingGravity();
+        //GamingGravity();
     }
 
     // метод перемещения персонажа
     private void CharacterMove()
     {
+       
         //  if (ch_controller.isGrounded)
         //{
         //перемещение по поверхности
-        moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxis("Horizontal") * speedMove;
-        moveVector.z = Input.GetAxis("Vertical") * speedMove;
+       
+           moveVector = Vector3.zero;
+           moveVector.x = Input.GetAxis("Horizontal") * speedMove;
+           moveVector.z = Input.GetAxis("Vertical") * speedMove;
+           
+
+
         
         // Debug.Log(moveVector.x);
         // Debug.Log(moveVector.z);
@@ -58,21 +64,22 @@ public class Move : MonoBehaviour
         }
          */
         //поворот персонажа
-        if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
-        {
+       if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
+       {
             Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove * Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(direct);
-        }
-
-        // }
+       }
        
+        // }
+
         moveVector.y = gravityForce; // расчет гравитации, выполнять после поворота!!!
         ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям
+        //ch_controller.SimpleMove(moveVector);
         
     }
 
     //метод гравитации
-    
+    /*
     private void GamingGravity()
     {
         if (!ch_controller.isGrounded)
@@ -103,7 +110,7 @@ public class Move : MonoBehaviour
             //   ch_animator.SetBool("Jump", false);
         }
         */
-    }
-
+   // }
+   
 
 }
