@@ -3002,8 +3002,23 @@ PrefabInstance:
       objectReference: {fileID: 1750808073}
     - target: {fileID: 7655508143211971521, guid: fc172e40725db0c4a993684e525e9483,
         type: 3}
+      propertyPath: m_Drag
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655508143211971521, guid: fc172e40725db0c4a993684e525e9483,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655508143211971521, guid: fc172e40725db0c4a993684e525e9483,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655508143211971521, guid: fc172e40725db0c4a993684e525e9483,
+        type: 3}
       propertyPath: m_Constraints
-      value: 80
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 7655508143211971522, guid: fc172e40725db0c4a993684e525e9483,
         type: 3}
@@ -3103,6 +3118,18 @@ MonoBehaviour:
   speedMove: 3
   turnSpeed: 150
   isEasy: 0
+--- !u!114 &1743537700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7655508143211971522, guid: fc172e40725db0c4a993684e525e9483,
+    type: 3}
+  m_PrefabInstance: {fileID: 1743537695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743537696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5e457370ecfcc40b8c8175e156cfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1750808073 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3963280025685776556, guid: be3e07fc93e0b6c47b8e7673daf17611,
@@ -4352,7 +4379,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2108234684}
+      objectReference: {fileID: 1743537700}
     - target: {fileID: 3773875144630262467, guid: a7eeb562e2cf1464f975b45ed9eead4f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target

@@ -40,6 +40,7 @@ public class MoveGeneral : MonoBehaviour
     // методы перемещения персонажа
     private void HardMove()
     {
+        rig.drag = 0f;
         //перемещение по поверхности
         moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal") * speedMove;
@@ -56,6 +57,7 @@ public class MoveGeneral : MonoBehaviour
     }
     private void EasyMove()
     {
+        rig.drag = 10000f;
         if (Input.GetKey(KeyCode.W))
         {
             transform.localPosition += transform.forward * speedMove * Time.deltaTime;
