@@ -23,7 +23,7 @@ public class SliderFuel : MonoBehaviour
     {
         sliderOut.onValueChanged.AddListener((v) =>
         {
-            sliderText.text = v.ToString("");
+            sliderText.text = v.ToString("0.");
         });           
     }
     private void FixedUpdate()
