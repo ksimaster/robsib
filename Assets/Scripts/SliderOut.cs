@@ -18,21 +18,18 @@ public class SliderOut : MonoBehaviour
         sliderOut.value = sliderOut.maxValue - behindMax;
         PlayerPrefs.SetFloat(nameValue, sliderOut.value);
     }
+
     private void Start()
     {
         sliderOut.onValueChanged.AddListener((v) =>
         {
             sliderText.text = v.ToString("");
-        });
-        
-        
+        });        
     }
+
     private void FixedUpdate()
     {
         sliderOut.value -= speedFrost;
-
-        if (sliderOut.value <= deadValue) PanelDead.SetActive(true);
-        
+        if (sliderOut.value <= deadValue) PanelDead.SetActive(true);   
     }
-
 }

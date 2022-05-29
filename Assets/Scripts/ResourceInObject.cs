@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class ResourceInObject : MonoBehaviour
 {
-    
     private int countResourceInObject;
     public float minCount, maxCount;
     private string nameResource;
@@ -17,8 +16,7 @@ public class ResourceInObject : MonoBehaviour
         countResourceInObject = Mathf.RoundToInt(Random.Range(minCount, maxCount));
         Debug.Log(countResourceInObject);
         PlayerPrefs.SetInt(nameResource, countResourceInObject);
-        
-}
+    }
 
     private void FixedUpdate()
     {
@@ -29,6 +27,7 @@ public class ResourceInObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     /*
     public void CollectResource()
     {
@@ -43,10 +42,6 @@ public class ResourceInObject : MonoBehaviour
             countResourceSecond = PlayerPrefs.GetInt(nameResourceSecond);
             PlayerPrefs.SetInt(nameResourceSecond, countResourceSecond++);
         }
-
-    
-
-
     }
     */
 }

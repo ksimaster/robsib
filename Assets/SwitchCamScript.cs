@@ -7,7 +7,6 @@ public class SwitchCamScript : MonoBehaviour
     public Camera cam1;
     public GameObject[] points = new GameObject[8];
     private int i = 1;
-    
 
     private void Update()
     {

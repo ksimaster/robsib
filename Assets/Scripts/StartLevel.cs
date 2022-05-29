@@ -7,9 +7,6 @@ public class StartLevel : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        PlayerPrefs.DeleteAll();
-        
+        PlayerPrefs.DeleteAll();        
     }
-
-
 }

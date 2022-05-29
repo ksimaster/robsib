@@ -18,23 +18,19 @@ public class SliderFuel : MonoBehaviour
         sliderOut.value = sliderOut.maxValue - behindMax;
         PlayerPrefs.SetFloat("Fuel", sliderOut.value);
     }
+
     private void Start()
     {
         sliderOut.onValueChanged.AddListener((v) =>
         {
             sliderText.text = v.ToString("");
-        });
-        
-        
+        });           
     }
     private void FixedUpdate()
-    {
-        
+    {     
         sliderOut.value -= speedFrost;
         PlayerPrefs.SetFloat("Fuel", sliderOut.value);
 
         if (sliderOut.value <= deadValue) PanelDead.SetActive(true);
-
     }
-
 }

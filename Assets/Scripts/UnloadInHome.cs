@@ -6,18 +6,15 @@ using UnityEngine.UI;
 public class UnloadInHome : MonoBehaviour
 {
     public string homeTag;
-    public int [] countCarResources;
+    public int[] countCarResources;
     public int[] countHomeResources;
     //public Text[] textCountResource;
     private string[] nameCarResources = { "TreeCar", "OreCar" };
     private string[] nameHomeResources = { "TreeHome", "OreHome" };
-
     //private string fuel = "Fuel";
     private float fuelCount;
     private float fuelExpenses = 4;
-
     public Slider sliderOut;
-
 
 
     private void OnCollisionEnter(Collision col)
@@ -32,13 +29,12 @@ public class UnloadInHome : MonoBehaviour
                 PlayerPrefs.SetInt(nameHomeResources[i], countCarResources[i] + countHomeResources[i]); // записываем в преф склада переменную равную сумме переменных склада и плэера 
                 //textCountResource[i].text = countResources[i].ToString();
             }
+
+            Debug.Log($"РУДЫ ДОМА: {PlayerPrefs.GetInt(nameHomeResources[0])}");
             fuelCount = PlayerPrefs.GetFloat("Fuel");
             sliderOut.value = fuelCount - fuelExpenses;
             PlayerPrefs.SetFloat("Fuel", sliderOut.value);
             Debug.Log("ПРИ ЗАЕЗДЕ УМЕНЬШИЛИ ПЕРЕМЕННУЮ FUEL в Pref");
-
-            
-}
+        }
     }
-
 }

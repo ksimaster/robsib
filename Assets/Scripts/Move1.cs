@@ -88,24 +88,12 @@ public class Move1 : MonoBehaviour
         else gravityForce = -1f;
         if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
         {
-
-
-
-
-
-
             // gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
-
-
-
             //ch_animator.SetBool("Jump", true);
-
             // gravityForce = jumpPower;
             //  ch_animator.SetTrigger("Jump");
-
             //   ch_animator.SetBool("Jump", false);
         }
     }
-    */
-    
+    */ 
 }

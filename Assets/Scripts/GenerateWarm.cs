@@ -22,12 +22,13 @@ public class GenerateWarm : MonoBehaviour
     private void Awake()
     {
        // PlayerPrefs.SetInt(nameResource, 1);
-
     }
+
     private void Start()
     {
         //countResource = PlayerPrefs.GetInt(nameResource);
     }
+
     private void FixedUpdate()
     {
         //timer += Time.deltaTime;
@@ -37,7 +38,6 @@ public class GenerateWarm : MonoBehaviour
 
             GenerateResource();
         }
-
     }
 
    public void GenerateResource()
@@ -47,7 +47,5 @@ public class GenerateWarm : MonoBehaviour
         sliderObject.value = sliderObject.value + generateValue;
         fuel = PlayerPrefs.GetFloat("Fuel");  
         PlayerPrefs.SetFloat("Fuel", fuel-generateValue);
-
     }
-
 }

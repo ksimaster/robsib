@@ -5,7 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speedMove;
-   // public float jumpPower;
+    // public float jumpPower;
 
     private float gravityForce; // гравитация персонажа
     private Vector3 moveVector; // направление движения персонажа
@@ -19,8 +19,7 @@ public class Move : MonoBehaviour
     */
 
     private void Start()
-    {
-        
+    {   
         ch_controller = GetComponent<CharacterController>();
         /*
         ch_animator = GetComponent<Animator>();
@@ -72,38 +71,23 @@ public class Move : MonoBehaviour
     }
 
     //метод гравитации
-    
     private void GamingGravity()
     {
         if (!ch_controller.isGrounded)
         {
             gravityForce -= 100f * Time.deltaTime;
-
             // ch_animator.SetBool("Jump", false);
         }
         else gravityForce = -1f;
         /*
         if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
         {
-
-
-
-
-
-
             // gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
-
-
-
             //ch_animator.SetBool("Jump", true);
-
             // gravityForce = jumpPower;
             //  ch_animator.SetTrigger("Jump");
-
             //   ch_animator.SetBool("Jump", false);
         }
         */
     }
-
-
 }

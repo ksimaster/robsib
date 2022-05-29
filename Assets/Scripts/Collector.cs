@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class Collector : MonoBehaviour
 {
@@ -87,12 +85,9 @@ public class Collector : MonoBehaviour
             Debug.Log("Записали руду в переменную");
         }
 
-
         /*
         if (collectFirstButton.gameObject.activeSelf) collectFirstButton.gameObject.SetActive(false);
         if (collectSecondButton.gameObject.activeSelf) collectSecondButton.gameObject.SetActive(false);
         */
     }
-
-    
 }

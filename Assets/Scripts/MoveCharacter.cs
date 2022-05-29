@@ -15,7 +15,6 @@ public class MoveCharacter : MonoBehaviour
     private CharacterController ch_controller;
     /*
     private Animator ch_animator;
-
     */
 
     private void Start()
@@ -44,11 +43,7 @@ public class MoveCharacter : MonoBehaviour
        
            moveVector = Vector3.zero;
            moveVector.x = Input.GetAxis("Horizontal") * speedMove;
-           moveVector.z = Input.GetAxis("Vertical") * speedMove;
-           
-
-
-        
+           moveVector.z = Input.GetAxis("Vertical") * speedMove;        
         // Debug.Log(moveVector.x);
         // Debug.Log(moveVector.z);
 
@@ -68,10 +63,8 @@ public class MoveCharacter : MonoBehaviour
        {
             Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove * Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(direct);
-       }
-       
+       }     
         // }
-
         moveVector.y = gravityForce; // расчет гравитации, выполнять после поворота!!!
         ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям
         //ch_controller.SimpleMove(moveVector);
@@ -92,21 +85,10 @@ public class MoveCharacter : MonoBehaviour
         /*
         if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
         {
-
-
-
-
-
-
             // gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
-
-
-
             //ch_animator.SetBool("Jump", true);
-
             // gravityForce = jumpPower;
             //  ch_animator.SetTrigger("Jump");
-
             //   ch_animator.SetBool("Jump", false);
         }
         */
