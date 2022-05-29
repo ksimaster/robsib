@@ -23,7 +23,7 @@ public class SliderFuelCar : MonoBehaviour
         });
     }
 
-    void Update()
+    void FixedUpdate()
     {
         slider.value -= fuelSpendSpeed;
         UpdateFuelCount();
