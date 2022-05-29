@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Move1 : MonoBehaviour
 {
     public float speedMove;
-   // public float jumpPower;
+    // public float jumpPower;
+    public Slider sliderFuelInCar;
 
     private float gravityForce; // гравитация персонажа
     private Vector3 moveVector; // направление движения персонажа
@@ -40,10 +43,22 @@ public class Move1 : MonoBehaviour
     // метод перемещения персонажа
     private void CharacterMove()
     {
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
+        if (horizontal != 0 || vertical != 0)
+        {
+            var path = (float)Math.Sqrt(horizontal * horizontal + vertical * vertical);
+            sliderFuelInCar.value -= path * PlayerConstants.FuelConsumption;
+            if (sliderFuelInCar.value <= 0)
+            {
+                return;
+            }
+        }
+
         //  if (ch_controller.isGrounded)
         //{
         //перемещение по поверхности
-        moveVector = Vector3.zero;
+            moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal") * speedMove;
         moveVector.z = Input.GetAxis("Vertical") * speedMove;
         rig.velocity = moveVector;

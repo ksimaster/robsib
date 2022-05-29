@@ -50,6 +50,7 @@ public class GenerateWarm1 : MonoBehaviour
         {
             fuel = PlayerPrefs.GetFloat("Fuel");
         }
+
         fuel -= fuelExpenses;
         PlayerPrefs.SetFloat("Fuel", fuel);
         if (sliderObject.name == "SliderFuel")

@@ -1,8 +1,12 @@
+using System;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Collector : MonoBehaviour
 {
+    private const int DelayStepsBeforHide = 30;
+
     public string collectFirstTag, collectSecondTag;
     public Button collectFirstButton, collectSecondButton;
     public string nameResourceFirst, nameResourceSecond;
@@ -10,19 +14,25 @@ public class Collector : MonoBehaviour
     private GameObject activatorResource;
     private bool isOre = false;
     private bool isWood = false;
+    private int restStepsBeforHide = 0;
+    private bool waitForHide = false;
 
     private void resetActivator()
     {
         isOre = false;
         isWood = false;
         activatorResource = null;
+        waitForHide = false;
+        collectFirstButton.gameObject.SetActive(false);
+        collectSecondButton.gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag(collectFirstTag) || col.gameObject.CompareTag(collectSecondTag))
-            resetActivator();
+        if (!col.gameObject.CompareTag(collectFirstTag) && !col.gameObject.CompareTag(collectSecondTag))
+            return;
 
+        waitForHide = false;
         if (col.gameObject.CompareTag(collectFirstTag))
         {
             collectFirstButton.gameObject.SetActive(true);
@@ -41,13 +51,25 @@ public class Collector : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision col)
+    private async void OnCollisionExit(Collision col)
     {
         if (col.gameObject.CompareTag(collectFirstTag) || col.gameObject.CompareTag(collectSecondTag))
         {
-            collectFirstButton.gameObject.SetActive(false);
-            collectSecondButton.gameObject.SetActive(false);
-            resetActivator();
+            restStepsBeforHide = DelayStepsBeforHide;
+            waitForHide = true;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (waitForHide) {
+            if (restStepsBeforHide == 0) {
+                resetActivator();
+            }
+            else
+            {
+                restStepsBeforHide--;
+            }
         }
     }
 

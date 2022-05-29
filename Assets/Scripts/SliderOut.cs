@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +5,11 @@ public class SliderOut : MonoBehaviour
 {
     public Slider sliderOut;
     public Text sliderText;
-    public float speedFrost;
     public float behindMax;
     public float deadValue;
     public string nameValue;
     public GameObject PanelDead;
+    private float speedFrost = PlayerConstants.SpeedFrost;
 
     private void Awake()
     {

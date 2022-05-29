@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,11 @@ public class UnloadInHome : MonoBehaviour
     public int[] countHomeResources;
     //public Text[] textCountResource;
     private string[] nameCarResources = { "TreeCar", "OreCar" };
-    private string[] nameHomeResources = { "TreeHome", "OreHome" };
-    //private string fuel = "Fuel";
+    private string[] nameHomeResources = { PlayerConstants.TreeHome, PlayerConstants.OreHome };
     private float fuelCount;
-    private float fuelExpenses = 4;
-    public Slider sliderOut;
-
+    public Slider sliderFuelInHouse;
+    public Slider sliderFuelInCar;
+     
 
     private void OnCollisionEnter(Collision col)
     {
@@ -30,11 +30,11 @@ public class UnloadInHome : MonoBehaviour
                 //textCountResource[i].text = countResources[i].ToString();
             }
 
-            Debug.Log($"псдш днлю: {PlayerPrefs.GetInt(nameHomeResources[0])}");
-            fuelCount = PlayerPrefs.GetFloat("Fuel");
-            sliderOut.value = fuelCount - fuelExpenses;
-            PlayerPrefs.SetFloat("Fuel", sliderOut.value);
-            Debug.Log("опх гюегде слемэьхкх оепелеммсч FUEL Б Pref");
+            fuelCount = sliderFuelInHouse.value;
+            var freeTankVolume = PlayerConstants.MaxFuelCar - sliderFuelInCar.value;
+            var fuelToPour = Math.Min(freeTankVolume, fuelCount);
+            sliderFuelInHouse.value -= fuelToPour;
+            sliderFuelInCar.value += fuelToPour;
         }
     }
 }
