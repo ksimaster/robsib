@@ -20,13 +20,13 @@ public class SliderFuelCar : MonoBehaviour
         slider.onValueChanged.AddListener((v) =>
         {
             sliderText.text = v.ToString("0.00");
+            UpdateFuelCount();
         });
     }
 
     void FixedUpdate()
     {
         slider.value -= fuelSpendSpeed;
-        UpdateFuelCount();
         if (slider.value <= deadValue) Debug.Log("Остановить машину");
     }
 

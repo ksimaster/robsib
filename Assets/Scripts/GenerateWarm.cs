@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,13 +6,11 @@ public class GenerateWarm : MonoBehaviour
     public Slider sliderObject;
     public float generateValue;
     public float timeOut;
-    private float fuel;
-    // public float behindMax;
-    //public float warmExpenses;
+    private int cntr;
 
     private void Awake()
     {
-       // PlayerPrefs.SetInt(nameResource, 1);
+        PlayerPrefs.SetInt(PlayerConstants.TreeHome, 0);
     }
 
     private void Start()
@@ -24,9 +20,14 @@ public class GenerateWarm : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //timer += Time.deltaTime;
+        cntr = (cntr + 1) % 10;
+        if (cntr % 10 != 0)
+        {
+            return;
+        }
+
         var countResource = PlayerPrefs.GetInt(PlayerConstants.TreeHome);
-        while (countResource > 0)
+        if (countResource > 0)
         {
             countResource--;
             PlayerPrefs.SetInt(PlayerConstants.TreeHome, countResource);

@@ -3,34 +3,34 @@ using UnityEngine.UI;
 
 public class GenerateFuel : MonoBehaviour
 {
-    public Slider sliderObject;
-    public float generateValue;
     public string nameResource;
-    public float timeOut;
-    private float fuel;
-    // public float behindMax;
-
-    private float timer = 0.0f;
-    private float waitTime = 2.0f;
-
-    // public float fuelExpenses;
+    public Slider sliderFuelInHouse;
+    public Slider sliderFuelInCar;
+    private int cntr;
 
     private void Awake()
     {
-        // PlayerPrefs.SetInt(nameResource, 1);
+        PlayerPrefs.SetInt(PlayerConstants.OreHome, 0);
     }
+
     private void Start()
     {
-        //countResource = PlayerPrefs.GetInt(nameResource);
     }
+
     private void FixedUpdate()
     {
-        var countResource = PlayerPrefs.GetInt(nameResource);
-        while (countResource > 0)
+        cntr = (cntr + 1) % 10;
+        if (cntr % 10 != 0)
         {
-            countResource--;
-            PlayerPrefs.SetInt(nameResource, countResource);
-            sliderObject.value += generateValue;
+            return;
+        }
+
+        var countOre = PlayerPrefs.GetInt(PlayerConstants.OreHome);
+        if (countOre > 0)
+        {
+            countOre--;
+            PlayerPrefs.SetInt(PlayerConstants.OreHome, countOre);
+            sliderFuelInHouse.value += PlayerConstants.FuelGenerateValue;
         }
     }
 }

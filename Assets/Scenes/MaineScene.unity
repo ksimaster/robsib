@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.27466637, g: 0.2692443, b: 0.28319085, a: 1}
+  m_IndirectSpecularColor: {r: 0.27466625, g: 0.26924428, b: 0.28319097, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -395,9 +395,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderOut: {fileID: 17496944}
+  sliderSibling: {fileID: 2106486271}
   sliderText: {fileID: 681384324}
   behindMax: 10
-  deadValue: -50
   nameValue: Warm
   PanelDead: {fileID: 2104886351}
 --- !u!114 &17496944
@@ -26811,7 +26811,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderObject: {fileID: 1993037249}
-  generateValue: 5
   nameResource: OreHome
   timeOut: 5
 --- !u!114 &1993037249
@@ -28563,9 +28562,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderOut: {fileID: 2106486271}
+  sliderSibling: {fileID: 17496944}
   sliderText: {fileID: 1484654044}
   behindMax: 7
-  deadValue: -200
   nameValue: Out
   PanelDead: {fileID: 1418868291}
 --- !u!114 &2106486271

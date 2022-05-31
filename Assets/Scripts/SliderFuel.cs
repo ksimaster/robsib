@@ -18,6 +18,12 @@ public class SliderFuel : MonoBehaviour
         sliderOut.onValueChanged.AddListener((v) =>
         {
             sliderText.text = v.ToString("0.");
+            UpdateFuelCount();
         });           
+    }
+
+    private void UpdateFuelCount()
+    {
+        PlayerPrefs.SetFloat(PlayerConstants.Fuel, sliderOut.value);
     }
 }

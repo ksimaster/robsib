@@ -4,12 +4,13 @@ using UnityEngine.UI;
 public class SliderOut : MonoBehaviour
 {
     public Slider sliderOut;
+    public Slider sliderSibling;
+
     public Text sliderText;
     public float behindMax;
-    public float deadValue;
+
     public string nameValue;
     public GameObject PanelDead;
-    private float speedFrost = PlayerConstants.SpeedFrost;
 
     private void Awake()
     {
@@ -27,7 +28,22 @@ public class SliderOut : MonoBehaviour
 
     private void FixedUpdate()
     {
-        sliderOut.value -= speedFrost;
-        if (sliderOut.value <= deadValue) PanelDead.SetActive(true);   
+        if (sliderSibling.value <= sliderSibling.minValue)
+        {
+            return;
+        }
+
+        if (sliderOut.name == "SliderOut" && (sliderOut.value - sliderOut.minValue) < (sliderSibling.value - sliderSibling.minValue))
+        {
+            sliderOut.value -= PlayerConstants.SpeedUpFrost;
+        }
+        else
+        {
+            sliderOut.value -= PlayerConstants.SpeedFrost;
+        }
+
+        if (sliderOut.value <= sliderOut.minValue) {
+            PanelDead.SetActive(true);
+        }
     }
 }
