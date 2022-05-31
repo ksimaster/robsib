@@ -9,12 +9,11 @@ public static class PlayerConstants
 
     public const float FuelSpendIdle = 0.0001f;
     public const float FuelGenerateValue = 1f;
+    public const float WarmGenerateValue = 5f;
 
-    public const string Fuel = "Fuel";
     public const float MaxFuel = 100;
     public const float FuelConsumption = 0.0015f;
 
-    public const string FuelCar = "FuelCar";
     public const float MaxFuelCar = 10;
 
     public const string TreeHome = "TreeHome";

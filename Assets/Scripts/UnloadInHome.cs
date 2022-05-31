@@ -9,9 +9,10 @@ public class UnloadInHome : MonoBehaviour
     private string[] nameCarResources = { "TreeCar", "OreCar" };
     private string[] nameHomeResources = { PlayerConstants.TreeHome, PlayerConstants.OreHome };
     private string tag;
-
+    private int cntr = 0;
     public Slider sliderFuelInHouse;
     public Slider sliderFuelInCar;
+    public Slider sliderWarmHome;
 
     private void OnCollisionEnter(Collision col)
     {
@@ -44,13 +45,35 @@ public class UnloadInHome : MonoBehaviour
             }
 
 
-            var fuelHome = PlayerPrefs.GetFloat(PlayerConstants.Fuel);
+            var fuelHome = sliderFuelInHouse.value;
             if (fuelHome > 0)
             {
                 var freeTankVolume = PlayerConstants.MaxFuelCar - sliderFuelInCar.value;
                 var fuelToPour = Math.Min(Math.Min(freeTankVolume, fuelHome), 0.2f);
                 sliderFuelInHouse.value = fuelHome - fuelToPour;
                 sliderFuelInCar.value += fuelToPour;
+            }
+
+            cntr = (cntr + 1) % 10;
+            if (cntr % 10 != 0)
+            {
+                return;
+            }
+
+            var countOre = PlayerPrefs.GetInt(PlayerConstants.OreHome);
+            if (countOre > 0)
+            {
+                countOre--;
+                PlayerPrefs.SetInt(PlayerConstants.OreHome, countOre);
+                sliderFuelInHouse.value += PlayerConstants.FuelGenerateValue;
+            }
+
+            var treeResource = PlayerPrefs.GetInt(PlayerConstants.TreeHome);
+            if (treeResource > 0)
+            {
+                treeResource--;
+                PlayerPrefs.SetInt(PlayerConstants.TreeHome, treeResource);
+                sliderWarmHome.value += PlayerConstants.WarmGenerateValue;
             }
         }
     }

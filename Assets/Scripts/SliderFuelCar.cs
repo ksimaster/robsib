@@ -12,7 +12,6 @@ public class SliderFuelCar : MonoBehaviour
     private void Awake()
     {
         slider.value = slider.maxValue - behindMax;
-        UpdateFuelCount();
     }
 
     private void Start()
@@ -20,7 +19,6 @@ public class SliderFuelCar : MonoBehaviour
         slider.onValueChanged.AddListener((v) =>
         {
             sliderText.text = v.ToString("0.00");
-            UpdateFuelCount();
         });
     }
 
@@ -28,10 +26,5 @@ public class SliderFuelCar : MonoBehaviour
     {
         slider.value -= fuelSpendSpeed;
         if (slider.value <= deadValue) Debug.Log("Остановить машину");
-    }
-
-    private void UpdateFuelCount()
-    {
-        PlayerPrefs.SetFloat(PlayerConstants.FuelCar, slider.value);
     }
 }

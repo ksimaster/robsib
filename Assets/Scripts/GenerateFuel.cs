@@ -6,7 +6,6 @@ public class GenerateFuel : MonoBehaviour
     public string nameResource;
     public Slider sliderFuelInHouse;
     public Slider sliderFuelInCar;
-    private int cntr;
 
     private void Awake()
     {
@@ -19,18 +18,6 @@ public class GenerateFuel : MonoBehaviour
 
     private void FixedUpdate()
     {
-        cntr = (cntr + 1) % 10;
-        if (cntr % 10 != 0)
-        {
-            return;
-        }
-
-        var countOre = PlayerPrefs.GetInt(PlayerConstants.OreHome);
-        if (countOre > 0)
-        {
-            countOre--;
-            PlayerPrefs.SetInt(PlayerConstants.OreHome, countOre);
-            sliderFuelInHouse.value += PlayerConstants.FuelGenerateValue;
-        }
+    
     }
 }
