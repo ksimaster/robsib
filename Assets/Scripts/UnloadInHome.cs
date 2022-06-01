@@ -4,29 +4,35 @@ using UnityEngine.UI;
 
 public class UnloadInHome : MonoBehaviour
 {
+    private const int DefaultDelay = 10;
+    private const int DefaultActionDelay = 3;
     public string homeTag;
     //public Text[] textCountResource;
     private string[] nameCarResources = { "TreeCar", "OreCar" };
     private string[] nameHomeResources = { PlayerConstants.TreeHome, PlayerConstants.OreHome };
     private string tag;
-    private int cntr = 0;
     public Slider sliderFuelInHouse;
     public Slider sliderFuelInCar;
     public Slider sliderWarmHome;
+    private int delay = 0;
+    private bool isAtHome = false;
+    private int actionDelay = 0;
 
     private void OnCollisionEnter(Collision col)
     {
-        this.tag = col.gameObject.tag;
+        tag = col.gameObject.tag;
+        isAtHome = true;
     }
 
     private void OnCollisionExit(Collision col)
     {
-        this.tag = null;
+        delay = DefaultDelay;
+        isAtHome = false;
     }
 
     void FixedUpdate()
     {
-        if (tag == null)
+        if (ShoudWait())
         {
             return;
         }
@@ -44,20 +50,14 @@ public class UnloadInHome : MonoBehaviour
                 }
             }
 
-
             var fuelHome = sliderFuelInHouse.value;
+            
             if (fuelHome > 0)
             {
                 var freeTankVolume = PlayerConstants.MaxFuelCar - sliderFuelInCar.value;
-                var fuelToPour = Math.Min(Math.Min(freeTankVolume, fuelHome), 0.2f);
+                var fuelToPour = Math.Min(Math.Min(freeTankVolume, fuelHome), 0.15f);
                 sliderFuelInHouse.value = fuelHome - fuelToPour;
                 sliderFuelInCar.value += fuelToPour;
-            }
-
-            cntr = (cntr + 1) % 10;
-            if (cntr % 10 != 0)
-            {
-                return;
             }
 
             var countOre = PlayerPrefs.GetInt(PlayerConstants.OreHome);
@@ -78,4 +78,36 @@ public class UnloadInHome : MonoBehaviour
         }
     }
 
+    private bool ShoudWait()
+    {
+        if (tag == null)
+        {
+            return true;
+        }
+
+        if (!isAtHome)
+        {
+            if (delay == 0)
+            {
+                tag = null;
+                return true;
+            }
+            else
+            {
+                delay--;
+            }
+        }
+
+        if (actionDelay != 0)
+        {
+            actionDelay--;
+            return true;
+        }
+        else
+        {
+            actionDelay = DefaultActionDelay;
+        }
+
+        return false;
+    }
 }

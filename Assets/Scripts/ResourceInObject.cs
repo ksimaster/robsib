@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class ResourceInObject : MonoBehaviour
 {
@@ -27,21 +25,4 @@ public class ResourceInObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    /*
-    public void CollectResource()
-    {
-        if (collectFirstButton.gameObject.activeSelf)
-        {
-            countResourceFirst = PlayerPrefs.GetInt(nameResourceFirst);
-            PlayerPrefs.SetInt(nameResourceFirst, countResourceFirst++);
-        }
-
-        if (collectSecondButton.gameObject.activeSelf)
-        {
-            countResourceSecond = PlayerPrefs.GetInt(nameResourceSecond);
-            PlayerPrefs.SetInt(nameResourceSecond, countResourceSecond++);
-        }
-    }
-    */
 }
