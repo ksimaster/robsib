@@ -8,7 +8,7 @@ public class MoveGeneral : MonoBehaviour
     public float turnSpeed;
     // public float jumpPower;
 
-    private float gravityForce; // гравитация персонажа
+    private float gravityForce = -10; // гравитация персонажа
     private Vector3 moveVector; // направление движения персонажа
     private Quaternion target;
     private bool isHalfLeft, isHalfRight;
@@ -81,7 +81,7 @@ public class MoveGeneral : MonoBehaviour
         {
             transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
         }
-
+        #region [Наработки передвижений и поворотов]
         //поворот персонажа
         /*
         if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
@@ -174,6 +174,7 @@ public class MoveGeneral : MonoBehaviour
             //transform.localRotation = Quaternion.Lerp(transform.localRotation, target, speedMove * Time.deltaTime);
         }
         */
+        #endregion [Наработки передвижений и поворотов]
         moveVector.y = gravityForce; // расчет гравитации, выполнять после поворота!!! 
     }  
 }
