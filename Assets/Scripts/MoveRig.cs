@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveRig : MonoBehaviour
 {
     public float speedMove;
-   // public float jumpPower;
+    // public float jumpPower;
 
     private float gravityForce; // гравитация персонажа
     private Vector3 moveVector; // направление движения персонажа
@@ -21,8 +21,7 @@ public class MoveRig : MonoBehaviour
     private Rigidbody rig;
 
     private void Start()
-    {
-        
+    {     
         ch_controller = GetComponent<CharacterController>();
         /*
         ch_animator = GetComponent<Animator>();
@@ -34,7 +33,6 @@ public class MoveRig : MonoBehaviour
     {
         CharacterMove();
       //  GamingGravity();
-
     }
 
     // метод перемещения персонажа
@@ -50,8 +48,6 @@ public class MoveRig : MonoBehaviour
         //rig.velocity = moveVector;
         // Debug.Log(moveVector.x);
         // Debug.Log(moveVector.z);
-
-
         if (Input.GetKey(KeyCode.W))
         {
 
@@ -81,11 +77,9 @@ public class MoveRig : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(direct);
         }
 
-        // }
-       
+        // }     
         moveVector.y = gravityForce; // расчет гравитации, выполнять после поворота!!!
-      //  ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям
-        
+      //  ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям        
     }
 
     //метод гравитации
@@ -101,24 +95,12 @@ public class MoveRig : MonoBehaviour
         else gravityForce = -1f;
         if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
         {
-
-
-
-
-
-
             // gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
-
-
-
             //ch_animator.SetBool("Jump", true);
-
             // gravityForce = jumpPower;
             //  ch_animator.SetTrigger("Jump");
-
             //   ch_animator.SetBool("Jump", false);
         }
     }
-    */
-    
+    */ 
 }

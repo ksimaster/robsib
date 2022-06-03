@@ -12,21 +12,16 @@ public class Transfer : MonoBehaviour
     public string[] nameGiveResources;
     public int[] countResources;
 
-
-
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag(collectTags[0]))
         {
             collectButtons[0].gameObject.SetActive(true);
-
         }
         if (col.gameObject.CompareTag(collectTags[1]))
         {
             collectButtons[2].gameObject.SetActive(true);
         }
-
-
     }
 
     public void CollectResource()
@@ -51,8 +46,6 @@ public class Transfer : MonoBehaviour
             PlayerPrefs.SetInt(nameCollectResources[1], countResources[1]++);
             Debug.Log("Записали руду в переменную");
         }
-
-
         /*
         if (collectFirstButton.gameObject.activeSelf) collectFirstButton.gameObject.SetActive(false);
         if (collectSecondButton.gameObject.activeSelf) collectSecondButton.gameObject.SetActive(false);
@@ -80,6 +73,4 @@ public class Transfer : MonoBehaviour
         if (collectSecondButton.gameObject.activeSelf) collectSecondButton.gameObject.SetActive(false);
         */
     }
-
-
 }

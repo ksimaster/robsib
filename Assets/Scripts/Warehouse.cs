@@ -4,9 +4,8 @@ using UnityEngine.UI;
 
 public class Warehouse : MonoBehaviour
 {
-    
-    public int [] countResources;
-    public string [] nameResources;
+    public int[] countResources;
+    public string[] nameResources;
     public Text[] textCountResources;
 
     private void FixedUpdate()
@@ -18,12 +17,11 @@ public class Warehouse : MonoBehaviour
         // Выводим на экран
         textCountResources[0].text = countResources[0].ToString();
         textCountResources[1].text = countResources[1].ToString();
-
     */
         //тоже самое, через цикл и с возможность работать без вывода на экран
-        for (int i=0; i<countResources.Length; i++) 
+        for (int i = 0; i < countResources.Length; i++)
         {
-            if(countResources.Length == 1)
+            if (countResources.Length == 1)
             {
                 countResources[i] = PlayerPrefs.GetInt(gameObject.name);
             }
@@ -31,17 +29,13 @@ public class Warehouse : MonoBehaviour
             {
                 countResources[i] = PlayerPrefs.GetInt(nameResources[i]);
             }
-            
-           // Debug.Log("Загрузили переменную: " + countResources[i]);
+
+            // Debug.Log("Загрузили переменную: " + countResources[i]);
             if (textCountResources.Length > 0)
             {
-              textCountResources[i].text = countResources[i].ToString();
-           //     Debug.Log("Записал в панель: " + countResources[i]);
+                textCountResources[i].text = countResources[i].ToString();
+                //     Debug.Log("Записал в панель: " + countResources[i]);
             }
-
         }
-
     }
-
-
 }

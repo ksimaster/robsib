@@ -1,44 +1,113 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UnloadInHome : MonoBehaviour
 {
+    private const int DefaultDelay = 10;
+    private const int DefaultActionDelay = 3;
     public string homeTag;
-    public int [] countCarResources;
-    public int[] countHomeResources;
     //public Text[] textCountResource;
     private string[] nameCarResources = { "TreeCar", "OreCar" };
-    private string[] nameHomeResources = { "TreeHome", "OreHome" };
-
-    //private string fuel = "Fuel";
-    private float fuelCount;
-    private float fuelExpenses = 4;
-
-    public Slider sliderOut;
-
-
+    private string[] nameHomeResources = { PlayerConstants.TreeHome, PlayerConstants.OreHome };
+    private string tag;
+    public Slider sliderFuelInHouse;
+    public Slider sliderFuelInCar;
+    public Slider sliderWarmHome;
+    private int delay = 0;
+    private bool isAtHome = false;
+    private int actionDelay = 0;
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag(homeTag))
-        {
-            for (int i = 0; i < countCarResources.Length; i++)
-            {
-                countCarResources[i] = PlayerPrefs.GetInt(nameCarResources[i]); // выводим из префа, что хранится в плэеере в переменную
-                countHomeResources[i] = PlayerPrefs.GetInt(nameHomeResources[i]); // выводим из префа, что хранится в доме-складе в переменную
-                PlayerPrefs.SetInt(nameCarResources[i], 0); //обнуляем переменную в префе плэеера
-                PlayerPrefs.SetInt(nameHomeResources[i], countCarResources[i] + countHomeResources[i]); // записываем в преф склада переменную равную сумме переменных склада и плэера 
-                //textCountResource[i].text = countResources[i].ToString();
-            }
-            fuelCount = PlayerPrefs.GetFloat("Fuel");
-            sliderOut.value = fuelCount - fuelExpenses;
-            PlayerPrefs.SetFloat("Fuel", sliderOut.value);
-            Debug.Log("ПРИ ЗАЕЗДЕ УМЕНЬШИЛИ ПЕРЕМЕННУЮ FUEL в Pref");
-
-            
-}
+        tag = col.gameObject.tag;
+        isAtHome = true;
     }
 
+    private void OnCollisionExit(Collision col)
+    {
+        delay = DefaultDelay;
+        isAtHome = false;
+    }
+
+    void FixedUpdate()
+    {
+        if (ShoudWait())
+        {
+            return;
+        }
+
+        if (tag.Equals(homeTag))
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                var car = PlayerPrefs.GetInt(nameCarResources[i]); // выводим из префа, что хранится в плэеере в переменную
+                var home = PlayerPrefs.GetInt(nameHomeResources[i]); // выводим из префа, что хранится в доме-складе в переменную
+                if (car > 0)
+                {
+                    PlayerPrefs.SetInt(nameCarResources[i], car - 1);
+                    PlayerPrefs.SetInt(nameHomeResources[i], home + 1);
+                }
+            }
+
+            var fuelHome = sliderFuelInHouse.value;
+            
+            if (fuelHome > 0)
+            {
+                var freeTankVolume = PlayerConstants.MaxFuelCar - sliderFuelInCar.value;
+                var fuelToPour = Math.Min(Math.Min(freeTankVolume, fuelHome), 0.15f);
+                sliderFuelInHouse.value = fuelHome - fuelToPour;
+                sliderFuelInCar.value += fuelToPour;
+            }
+
+            var countOre = PlayerPrefs.GetInt(PlayerConstants.OreHome);
+            if (countOre > 0)
+            {
+                countOre--;
+                PlayerPrefs.SetInt(PlayerConstants.OreHome, countOre);
+                sliderFuelInHouse.value += PlayerConstants.FuelGenerateValue;
+            }
+
+            var treeResource = PlayerPrefs.GetInt(PlayerConstants.TreeHome);
+            if (treeResource > 0)
+            {
+                treeResource--;
+                PlayerPrefs.SetInt(PlayerConstants.TreeHome, treeResource);
+                sliderWarmHome.value += PlayerConstants.WarmGenerateValue;
+            }
+        }
+    }
+
+    private bool ShoudWait()
+    {
+        if (tag == null)
+        {
+            return true;
+        }
+
+        if (!isAtHome)
+        {
+            if (delay == 0)
+            {
+                tag = null;
+                return true;
+            }
+            else
+            {
+                delay--;
+            }
+        }
+
+        if (actionDelay != 0)
+        {
+            actionDelay--;
+            return true;
+        }
+        else
+        {
+            actionDelay = DefaultActionDelay;
+        }
+
+        return false;
+    }
 }

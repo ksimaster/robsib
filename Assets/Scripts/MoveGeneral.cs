@@ -68,7 +68,7 @@ public class MoveGeneral : MonoBehaviour
         }
 
         //для поворота при использовании перемещения через transform с moveVector
-      //  moveVector.x = Input.GetAxis("Horizontal") * speedMove;
+        //  moveVector.x = Input.GetAxis("Horizontal") * speedMove;
         //moveVector.z = Input.GetAxis("Vertical") * speedMove;
 
         //поворот с помощью transform.Rotate
@@ -76,6 +76,7 @@ public class MoveGeneral : MonoBehaviour
         {
             transform.Rotate(Vector3.up, -turnSpeed*Time.deltaTime);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);

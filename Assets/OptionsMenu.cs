@@ -5,14 +5,14 @@ using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
-  public AudioMixer audioMixer;
+    public AudioMixer audioMixer;
 
-        public void SetVolume (float volume)
+    public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20); 
+        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
     }
 
-    public void SetQuality (int qualityIndex)
+    public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
@@ -20,6 +20,5 @@ public class OptionsMenu : MonoBehaviour
     public void Sound()
     {
         AudioListener.pause = !AudioListener.pause;
-
     }
 }

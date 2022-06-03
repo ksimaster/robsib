@@ -45,8 +45,8 @@ public class Giver : MonoBehaviour
 
     private void Start()
     {
-        
     }
+
     public void GiveResource()
     {
     }
@@ -72,11 +72,8 @@ public class Giver : MonoBehaviour
                     return true;
                 }
             }
-
         }
         
         return false;
     }
-
-
 }

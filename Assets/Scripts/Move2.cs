@@ -23,22 +23,19 @@ public class Move2 : MonoBehaviour
     private Rigidbody rig;
 
     private void Start()
-    {
-        
+    {   
        // ch_controller = GetComponent<CharacterController>();
         /*
         ch_animator = GetComponent<Animator>();
         */
         rig = GetComponent<Rigidbody>();
         //transform.rotation = Quaternion.Euler(0, -90f, 0);
-
     }
 
     private void FixedUpdate()
     {
         CharacterMove();
       //  GamingGravity();
-
     }
 
     // метод перемещения персонажа
@@ -190,11 +187,8 @@ public class Move2 : MonoBehaviour
 
         // }
         */
-        
-
             moveVector.y = gravityForce; // расчет гравитации, выполнять после поворота!!!
-      //  ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям
-        
+      //  ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям     
     }
 
     //метод гравитации
@@ -210,16 +204,7 @@ public class Move2 : MonoBehaviour
         else gravityForce = -1f;
         if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
         {
-
-
-
-
-
-
             // gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
-
-
-
             //ch_animator.SetBool("Jump", true);
 
             // gravityForce = jumpPower;
