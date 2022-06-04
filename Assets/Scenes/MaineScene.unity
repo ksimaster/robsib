@@ -12514,7 +12514,7 @@ PrefabInstance:
     - target: {fileID: 8825344795924887519, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
         type: 3}
       propertyPath: m_Drag
-      value: 20.29
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8825344795924887519, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
         type: 3}
@@ -12524,12 +12524,17 @@ PrefabInstance:
     - target: {fileID: 8825344795924887519, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 31.89
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8825344795924887519, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
         type: 3}
       propertyPath: m_Constraints
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825344795924887519, guid: 4391034cac6d8dd4ebc3a0da72a622ad,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4391034cac6d8dd4ebc3a0da72a622ad, type: 3}
@@ -17357,9 +17362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1e03e27ac8b904bb0ef38e94c62498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMove: 5
-  turnSpeed: 150
-  isEasy: 0
 --- !u!114 &1194155948
 MonoBehaviour:
   m_ObjectHideFlags: 0
