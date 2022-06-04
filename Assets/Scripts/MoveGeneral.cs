@@ -8,12 +8,12 @@ public class MoveGeneral : MonoBehaviour
     // private Vector3 moveVector; // направление движения персонажа
     // private Quaternion target;
     // private bool isHalfLeft, isHalfRight;
-    private bool isEasy = true;
+    private bool isEasy = false;
     private Rigidbody rig;
 
     private void Awake()
     {
-        // isEasy = PlayerPrefs.GetString(PlayerConstants.MoveMode) == PlayerConstants.EasyMode;
+        isEasy = PlayerPrefs.GetString(PlayerConstants.MoveMode) == PlayerConstants.EasyMode;
     }
 
     private void Start()
