@@ -8,12 +8,16 @@ public class MoveGeneral : MonoBehaviour
     // private Vector3 moveVector; // направление движения персонажа
     // private Quaternion target;
     // private bool isHalfLeft, isHalfRight;
-    private bool isEasy = false;
+    public bool isEasy = false;
     private Rigidbody rig;
 
     private void Awake()
     {
-        isEasy = PlayerPrefs.GetString(PlayerConstants.MoveMode) == PlayerConstants.EasyMode;
+        var moveMode = PlayerPrefs.GetString(PlayerConstants.MoveMode);
+        if (!string.IsNullOrEmpty(moveMode))
+        {
+            isEasy = PlayerPrefs.GetString(PlayerConstants.MoveMode) == PlayerConstants.EasyMode;
+        }
     }
 
     private void Start()
@@ -56,9 +60,9 @@ public class MoveGeneral : MonoBehaviour
         {
             moveVector = moveVector * 0;
         }
-        else
+        else if(correlation < 0.6f)
         {
-            moveVector = moveVector * (float)((correlation - 0.3f) / 0.7f);
+            moveVector = moveVector * (float)((correlation - 0.3f) / 0.3f);
         }
 
         moveVector.y = -rig.drag;
