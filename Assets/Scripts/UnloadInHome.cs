@@ -20,14 +20,20 @@ public class UnloadInHome : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        tag = col.gameObject.tag;
-        isAtHome = true;
+        if (col.gameObject.tag.Equals(homeTag))
+        {
+            tag = col.gameObject.tag;
+            isAtHome = true;
+        }
     }
 
     private void OnCollisionExit(Collision col)
     {
-        delay = DefaultDelay;
-        isAtHome = false;
+        if (col.gameObject.tag.Equals(homeTag))
+        {
+            delay = DefaultDelay;
+            isAtHome = false;
+        }
     }
 
     void FixedUpdate()

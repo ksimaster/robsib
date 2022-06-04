@@ -14,4 +14,13 @@ public static class PlayerConstants
 
     public const string TreeHome = "TreeHome";
     public const string OreHome = "OreHome";
+
+    // Movement
+    public const string MoveMode = "MoveMode";
+    public const string EasyMode = "EasyMode";
+    public const string HardMode = "HardMode";
+
+    public const float speedMove = 5f;
+    public const float turnSpeed = 100f;
+
 }
