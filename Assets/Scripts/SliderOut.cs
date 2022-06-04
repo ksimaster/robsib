@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SliderOut : MonoBehaviour
 {
     public Slider sliderOut;
+    public Slider sliderSibling;
+
     public Text sliderText;
-    public float speedFrost;
     public float behindMax;
-    public float deadValue;
+
     public string nameValue;
     public GameObject PanelDead;
 
@@ -18,21 +17,33 @@ public class SliderOut : MonoBehaviour
         sliderOut.value = sliderOut.maxValue - behindMax;
         PlayerPrefs.SetFloat(nameValue, sliderOut.value);
     }
+
     private void Start()
     {
         sliderOut.onValueChanged.AddListener((v) =>
         {
-            sliderText.text = v.ToString("");
-        });
-        
-        
+            sliderText.text = v.ToString("0.00");
+        });        
     }
+
     private void FixedUpdate()
     {
-        sliderOut.value -= speedFrost;
+        if (sliderSibling.value <= sliderSibling.minValue)
+        {
+            return;
+        }
 
-        if (sliderOut.value <= deadValue) PanelDead.SetActive(true);
-        
+        if (sliderOut.name == "SliderOut" && (sliderOut.value - sliderOut.minValue) < (sliderSibling.value - sliderSibling.minValue))
+        {
+            sliderOut.value -= PlayerConstants.SpeedUpFrost;
+        }
+        else
+        {
+            sliderOut.value -= PlayerConstants.SpeedFrost;
+        }
+
+        if (sliderOut.value <= sliderOut.minValue) {
+            PanelDead.SetActive(true);
+        }
     }
-
 }
