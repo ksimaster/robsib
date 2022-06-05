@@ -1,40 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class VolumeManager : MonoBehaviour
 {
+    private const float DefaultMusicFloat = 0.5f;
+    private const float DefaultsoundEffectsFloat = 0.25f;
 
-    private static readonly string FirstPlay = "FirstPlay";
     private static readonly string MusicPref = "MusicPref";
     private static readonly string SoundEffectsPref = "SoundEffectsPref";
-    private int firstPlayInt;
     public Slider musicSlider, soundEffectsSlider;
-    private float musicFloat, soundEffectsFloat;
     public AudioSource musicAudio;
     public AudioSource[] soundEffectsAudio;
     // Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
-        firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
-
-        if(firstPlayInt == 0)
+        if(!PlayerPrefs.HasKey(MusicPref))
         {
-            musicFloat = 0.5f;
-            soundEffectsFloat = 0.25f;
-            musicSlider.value = musicFloat;
-            soundEffectsSlider.value = soundEffectsFloat;
-            PlayerPrefs.SetFloat(MusicPref, musicFloat);
-            PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsFloat);
-            PlayerPrefs.SetInt(FirstPlay, -1);
+            musicSlider.value = DefaultMusicFloat;
+            soundEffectsSlider.value = DefaultsoundEffectsFloat;
+            PlayerPrefs.SetFloat(MusicPref, DefaultMusicFloat);
+            PlayerPrefs.SetFloat(SoundEffectsPref, DefaultsoundEffectsFloat);
         }
         else
         {
-            musicFloat = PlayerPrefs.GetFloat(MusicPref);
-            musicSlider.value = musicFloat;
-            soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
-            soundEffectsSlider.value = soundEffectsFloat;
+            soundEffectsSlider.value = PlayerPrefs.GetFloat(SoundEffectsPref);
+            musicSlider.value = PlayerPrefs.GetFloat(MusicPref);
         }
     }
 
@@ -42,14 +33,7 @@ public class VolumeManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat(MusicPref, musicSlider.value);
         PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsSlider.value);
-    }
-
-    void OnApplicationFocus(bool inFocus)
-    {
-        if (!inFocus)
-        {
-            SaveSoundSettings();
-        }
+        PlayerPrefs.Save();
     }
 
     public void UpdateSound()
@@ -61,10 +45,8 @@ public class VolumeManager : MonoBehaviour
             soundEffectsAudio[i].volume = soundEffectsSlider.value;
         }
 
-    }
-
-    
-    
+        SaveSoundSettings();
+    }  
 }
     
     
