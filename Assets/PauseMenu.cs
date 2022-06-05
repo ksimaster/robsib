@@ -7,15 +7,17 @@ public class PauseMenu : MonoBehaviour
 {
     public bool PauseGame;
     public GameObject pauseGameMenu;
+    public GameObject settingsMenu;
+    public GameObject startEducationPanel;
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !startEducationPanel.activeSelf)
         {
             if (PauseGame)
             {
                 Resume();
             }
-
             else
             {
                 Pause();
@@ -26,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseGameMenu.SetActive(false);
+        settingsMenu.SetActive(false);
         Time.timeScale = 1f;
         PauseGame = false;
     }

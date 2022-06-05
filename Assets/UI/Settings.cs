@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
 
     void Start()

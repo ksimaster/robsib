@@ -1,5 +1,7 @@
 public static class PlayerConstants
 {
+    public const string IsFristRun = "IsFristRun";
+
     public const float SpeedFrost = 0.013f;
     public const float SpeedUpFrost = 0.25f;
 
