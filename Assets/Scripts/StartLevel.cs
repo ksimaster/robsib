@@ -5,7 +5,7 @@ public class StartLevel : MonoBehaviour
 {
     private readonly string[] StoredFloatKeys = new string[] { VolumeManager.SoundEffectsPref, VolumeManager.MusicPref };
 
-    private readonly string[] StoredIntKeys = new string[] { PlayerConstants.IsFristRun };
+    private readonly string[] StoredIntKeys = new string[] { PlayerConstants.IsEducationComplete };
 
     private readonly string[] StoredStringKeys = new string[] {};
 

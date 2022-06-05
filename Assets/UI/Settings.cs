@@ -10,6 +10,13 @@ public class Settings : MonoBehaviour
  
     }
 
+    public void UpdateMoveControl(bool val)
+    {
+        var player = GameObject.FindWithTag("Player");
+        var playerScript = player.GetComponent<MoveGeneral>();
+        playerScript.isEasy = !playerScript.isEasy;
+    }
+
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);

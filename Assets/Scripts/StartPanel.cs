@@ -11,13 +11,13 @@ public class StartPanel : MonoBehaviour
         button.onClick.AddListener(() =>
         {
             Time.timeScale = 1f;
+            PlayerPrefs.SetInt(PlayerConstants.IsEducationComplete, 1);
             startPanel.SetActive(false);
         });
 
-        if (PlayerPrefs.GetInt(PlayerConstants.IsFristRun) == 0)
+        if (PlayerPrefs.GetInt(PlayerConstants.IsEducationComplete) == 0)
         {
             Time.timeScale = 0f;
-            PlayerPrefs.SetInt(PlayerConstants.IsFristRun, 1);
         }
         else
         {
