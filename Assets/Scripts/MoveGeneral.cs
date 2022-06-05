@@ -15,7 +15,7 @@ public class MoveGeneral : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(PlayerConstants.MoveMode))
         {
-            isEasy = PlayerPrefs.GetInt(PlayerConstants.MoveMode) == 1;
+            isEasy = PlayerPrefs.GetInt(PlayerConstants.MoveMode) == 0;
         }
     }
 
@@ -55,13 +55,13 @@ public class MoveGeneral : MonoBehaviour
 
         Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, 2 * Time.deltaTime, 0.0f);
         transform.rotation = Quaternion.LookRotation(direct);
-        if (correlation < 0.3f)
+        if (correlation < 0.5f)
         {
             moveVector = moveVector * 0;
         }
-        else if(correlation < 0.6f)
+        else if(correlation < 0.8f)
         {
-            moveVector = moveVector * (float)((correlation - 0.3f) / 0.3f);
+            moveVector = moveVector * (float)((correlation - 0.5f) / 0.3f);
         }
 
         moveVector.y = -rig.drag;

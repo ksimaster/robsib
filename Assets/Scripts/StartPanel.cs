@@ -24,4 +24,9 @@ public class StartPanel : MonoBehaviour
             startPanel.SetActive(false);
         }
     }
+
+    public void Reset()
+    {
+        PlayerPrefs.SetInt(PlayerConstants.IsEducationComplete, 0);
+    }
 }
