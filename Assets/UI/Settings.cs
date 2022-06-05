@@ -7,7 +7,6 @@ public class Settings : MonoBehaviour
 
     void Start()
     {
- 
     }
 
     public void UpdateMoveControl(bool val)
@@ -15,6 +14,7 @@ public class Settings : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         var playerScript = player.GetComponent<MoveGeneral>();
         playerScript.isEasy = !playerScript.isEasy;
+        PlayerPrefs.SetInt(PlayerConstants.MoveMode, playerScript.isEasy ? 1 : 0);
     }
 
     public void SetQuality(int qualityIndex)

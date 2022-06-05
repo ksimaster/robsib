@@ -13,10 +13,9 @@ public class MoveGeneral : MonoBehaviour
 
     private void Awake()
     {
-        var moveMode = PlayerPrefs.GetString(PlayerConstants.MoveMode);
-        if (!string.IsNullOrEmpty(moveMode))
+        if (PlayerPrefs.HasKey(PlayerConstants.MoveMode))
         {
-            isEasy = PlayerPrefs.GetString(PlayerConstants.MoveMode) == PlayerConstants.EasyMode;
+            isEasy = PlayerPrefs.GetInt(PlayerConstants.MoveMode) == 1;
         }
     }
 

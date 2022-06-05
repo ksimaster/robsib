@@ -5,9 +5,9 @@ public class StartLevel : MonoBehaviour
 {
     private readonly string[] StoredFloatKeys = new string[] { VolumeManager.SoundEffectsPref, VolumeManager.MusicPref };
 
-    private readonly string[] StoredIntKeys = new string[] { PlayerConstants.IsEducationComplete };
+    private readonly string[] StoredIntKeys = new string[] { PlayerConstants.IsEducationComplete, PlayerConstants.MoveMode };
 
-    private readonly string[] StoredStringKeys = new string[] {};
+    private readonly string[] StoredStringKeys = new string[] { };
 
     // Start is called before the first frame update
     void Awake()

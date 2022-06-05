@@ -19,8 +19,6 @@ public static class PlayerConstants
 
     // Movement
     public const string MoveMode = "MoveMode";
-    public const string EasyMode = "EasyMode";
-    public const string HardMode = "HardMode";
 
     public const float speedMove = 5f;
     public const float turnSpeed = 100f;
