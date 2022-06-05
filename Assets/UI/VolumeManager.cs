@@ -6,8 +6,8 @@ public class VolumeManager : MonoBehaviour
     private const float DefaultMusicFloat = 0.5f;
     private const float DefaultsoundEffectsFloat = 0.25f;
 
-    private static readonly string MusicPref = "MusicPref";
-    private static readonly string SoundEffectsPref = "SoundEffectsPref";
+    public const string MusicPref = "MusicPref";
+    public const string SoundEffectsPref = "SoundEffectsPref";
     public Slider musicSlider, soundEffectsSlider;
     public AudioSource musicAudio;
     public AudioSource[] soundEffectsAudio;
@@ -24,29 +24,25 @@ public class VolumeManager : MonoBehaviour
         }
         else
         {
-            soundEffectsSlider.value = PlayerPrefs.GetFloat(SoundEffectsPref);
             musicSlider.value = PlayerPrefs.GetFloat(MusicPref);
+            soundEffectsSlider.value = PlayerPrefs.GetFloat(SoundEffectsPref);
         }
     }
 
-    public void SaveSoundSettings()
-    {
-        PlayerPrefs.SetFloat(MusicPref, musicSlider.value);
-        PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsSlider.value);
-        PlayerPrefs.Save();
-    }
-
-    public void UpdateSound()
+    public void UpdateMusic()
     {
         musicAudio.volume = musicSlider.value;
+        PlayerPrefs.SetFloat(MusicPref, musicSlider.value);
+    }
 
-        for(int i = 0; i < soundEffectsAudio.Length; i++)
+    public void UpdateEffects()
+    {
+        for (int i = 0; i < soundEffectsAudio.Length; i++)
         {
             soundEffectsAudio[i].volume = soundEffectsSlider.value;
         }
-
-        SaveSoundSettings();
-    }  
+        PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsSlider.value);
+    }
 }
     
     

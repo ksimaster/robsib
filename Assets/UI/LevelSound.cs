@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class LevelSound : MonoBehaviour
 {
-    private static readonly string MusicPref = "MusicPref";
-    private static readonly string SoundEffectsPref = "SoundEffectsPref";
-    private float musicFloat, soundEffectsFloat;
     public AudioSource musicAudio;
     public AudioSource[] soundEffectsAudio;
 
-    private void Awake()
+    private void Start()
     {
         LevelSoundSettings();
     }
 
     private void LevelSoundSettings()
     {
-        musicFloat = PlayerPrefs.GetFloat(MusicPref);
-        soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
+        var musicFloat = PlayerPrefs.GetFloat(VolumeManager.MusicPref);
+        var soundEffectsFloat = PlayerPrefs.GetFloat(VolumeManager.SoundEffectsPref);
 
         musicAudio.volume = musicFloat;
 
