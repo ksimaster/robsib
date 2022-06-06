@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.27466637, g: 0.2692443, b: 0.28319085, a: 1}
+  m_IndirectSpecularColor: {r: 0.27466625, g: 0.26924428, b: 0.28319097, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1781,11 +1781,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textOnPanel: {fileID: 822124145}
   speedText: 0.03
-  isNeedRanges: 000000
+  isNeedRanges: 00000000000000
   temperatures:
-  - -14
-  - -20
+  - -15
   - -30
+  - -45
+  - -60
+  - -80
+  - -110
+  - -120
   sliderOut: {fileID: 2106486271}
   PanelMessage: {fileID: 1188070446}
 --- !u!114 &85054325
@@ -9970,7 +9974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -425}
+  m_AnchoredPosition: {x: 0, y: -204}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602022537
@@ -13455,10 +13459,10 @@ RectTransform:
   m_Father: {fileID: 1188070447}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.801, y: 114.47}
-  m_SizeDelta: {x: 1779.922, y: 728.94}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1.6490479, y: 67.737}
+  m_SizeDelta: {x: -117.177, y: -191.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822124145
 MonoBehaviour:
@@ -20173,8 +20177,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -9, y: 361}
+  m_SizeDelta: {x: 996.3401, y: -492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188070448
 MonoBehaviour:
@@ -26482,7 +26486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1544541382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36545,7 +36549,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1110786790}
   m_HandleRect: {fileID: 580160929}
   m_Direction: 2
-  m_MinValue: -200
+  m_MinValue: -150
   m_MaxValue: -5
   m_WholeNumbers: 0
   m_Value: -5
