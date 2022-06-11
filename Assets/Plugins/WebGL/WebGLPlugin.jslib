@@ -4,6 +4,11 @@ mergeInto(LibraryManager.library, {
       // Show a message as an alert
       window.showAdv();
    },
+   // Function Share (add ksimaster)
+   ShareFunction: function () {
+      // Show a message as an alert
+      window.showShare();
+   },
    // Function with the text param
    PassTextParam: function (text) {
       // Convert bytes to the text
