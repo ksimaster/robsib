@@ -9,6 +9,16 @@ mergeInto(LibraryManager.library, {
       // Show a message as an alert
       window.showShare();
    },
+   // Function InterstitialFunction (add ksimaster)
+   InterstitialFunction: function () {
+      // Show a message as an alert
+      window.showAdInterstitial();
+   },
+   // Function RewardFunction (add ksimaster)
+   RewardFunction: function () {
+      // Show a message as an alert
+      window.showAdReward();
+   },
    // Function with the text param
    PassTextParam: function (text) {
       // Convert bytes to the text

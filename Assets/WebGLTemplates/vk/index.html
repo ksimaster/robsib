@@ -12,12 +12,18 @@
 	  vkBridge.send('VKWebAppInit');
     </script>	
     <script>
-		function showAdv() {
-			window.vkBridge.send("VKWebAppShowInviteBox",{}).then(t=>console.log(t.success)).catch(t=>console.log(t))
-		}
+      //show ads on start game
+      showAdInterstitial();
+      //bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data => console.log(data.result)).catch(error => console.log(error));
     //add ksimaster
     function showShare() {
       window.vkBridge.send("VKWebAppShowInviteBox",{}).then(t=>console.log(t.success)).catch(t=>console.log(t))
+    }
+    function showAdInterstitial() {
+      bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data => console.log(data.result)).catch(error => console.log(error));
+    }
+    function showAdReward() {
+      bridge.send("VKWebAppShowNativeAds", {ad_format:"reward"}).then(data => console.log(data.result)).catch(error => console.log(error));
     }
 	</script>
   </head>

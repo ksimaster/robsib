@@ -10,6 +10,12 @@ public static class WebGLPluginJS
     // Importing "ShareFunction" add ksimaster
     [DllImport("__Internal")]
     public static extern void ShareFunction();
+    // Importing "RewardFunction" add ksimaster
+    [DllImport("__Internal")]
+    public static extern void RewardFunction();
+    // Importing "InterstitialFunction" add ksimaster
+    [DllImport("__Internal")]
+    public static extern void InterstitialFunction();
     // Importing "PassTextParam"
     [DllImport("__Internal")]
     public static extern void PassTextParam(string text);
