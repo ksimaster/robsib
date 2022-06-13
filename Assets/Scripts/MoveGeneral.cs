@@ -70,11 +70,11 @@ public class MoveGeneral : MonoBehaviour
 
     private void EasyMove()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.localPosition += transform.forward * PlayerConstants.speedMove * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             transform.localPosition += -transform.forward * PlayerConstants.speedMove * Time.deltaTime;
         }
@@ -84,12 +84,12 @@ public class MoveGeneral : MonoBehaviour
         //moveVector.z = Input.GetAxis("Vertical") * speedMove;
 
         //поворот с помощью transform.Rotate
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(Vector3.up, -PlayerConstants.turnSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(Vector3.up, PlayerConstants.turnSpeed * Time.deltaTime);
         }
