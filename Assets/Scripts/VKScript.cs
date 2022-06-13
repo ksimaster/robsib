@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class VKScript : MonoBehaviour
 {
 	public Slider sliderHome;
-	public float rewardBonusToSlider;
+	public Slider sliderFuelCar;
+	public float rewardBonusSliderHome;
+	public float rewardBonusSliderFuel;
+	public float lowBalanceFuel;
+
     public void ShareFriend(){
     	WebGLPluginJS.ShareFunction();
     }
@@ -16,6 +20,7 @@ public class VKScript : MonoBehaviour
     }
     public void ShowAdReward(){
     	WebGLPluginJS.RewardFunction();
-    	sliderHome.value += rewardBonusToSlider;
+    	sliderHome.value += rewardBonusSliderHome;
+    	if(sliderFuelCar.value<=lowBalanceFuel) sliderFuelCar.value += rewardBonusSliderFuel;
     }
 }
