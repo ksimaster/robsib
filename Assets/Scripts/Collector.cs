@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,20 @@ public class Collector : MonoBehaviour
     private GameObject activatorResource;
     private int restStepsBeforHide = 0;
     private bool waitForHide = false;
+
+
+    private void Awake()
+    {
+        if (collectFirstButton.gameObject.active)
+        {
+            collectFirstButton.gameObject.SetActive(false);
+        }
+
+        if (collectSecondButton.gameObject.active)
+        {
+            collectSecondButton.gameObject.SetActive(false);
+        }
+    }
 
     private void resetActivator()
     {
@@ -52,7 +67,7 @@ public class Collector : MonoBehaviour
     private void FixedUpdate()
     {
         if (waitForHide) {
-            if (restStepsBeforHide == 0) {
+            if (restStepsBeforHide <= 0 && !IsNearObject()) {
                 resetActivator();
             }
             else
@@ -92,5 +107,14 @@ public class Collector : MonoBehaviour
             
             PlayerPrefs.SetInt(nameResourceSecond, countResourceSecond++);
         }
+    }
+
+    private bool IsNearObject()
+    {
+        if (activatorResource == null)
+            return false;
+
+        return Math.Pow(activatorResource.transform.position.x - this.gameObject.transform.position.x, 2) +
+        Math.Pow(activatorResource.transform.position.z - this.gameObject.transform.position.z, 2) < 20;
     }
 }

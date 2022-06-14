@@ -8,12 +8,20 @@ public class ResourceInObject : MonoBehaviour
     private string nameResource;
     public Button collectButton;
 
-    private void Start()
-    {
+    private void Awake()
+    {    
         nameResource = gameObject.name;
-        countResourceInObject = Mathf.RoundToInt(Random.Range(minCount, maxCount));
-        Debug.Log(countResourceInObject);
-        PlayerPrefs.SetInt(nameResource, countResourceInObject);
+        if (!PlayerPrefs.HasKey(nameResource))
+        {
+            countResourceInObject = Mathf.RoundToInt(Random.Range(minCount, maxCount));
+            Debug.Log(countResourceInObject);
+            PlayerPrefs.SetInt(nameResource, countResourceInObject);
+        } 
+        else if (PlayerPrefs.GetInt(nameResource) <= 0)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -21,7 +29,7 @@ public class ResourceInObject : MonoBehaviour
         countResourceInObject = PlayerPrefs.GetInt(nameResource);
         if (countResourceInObject <= 0)
         {
-            if (collectButton.gameObject.activeSelf) collectButton.gameObject.SetActive(false);
+            if (collectButton != null && collectButton.gameObject.activeSelf) collectButton.gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }

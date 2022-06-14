@@ -23,4 +23,9 @@ public static class PlayerConstants
     public const float speedMove = 5f;
     public const float turnSpeed = 100f;
 
+    public const string PositionX = "PositionX";
+    public const string PositionY = "PositionY";
+    public const string PositionZ = "PositionZ";
+
+    public const string Camera = "Camera";
 }

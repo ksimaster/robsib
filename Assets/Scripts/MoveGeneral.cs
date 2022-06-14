@@ -10,12 +10,21 @@ public class MoveGeneral : MonoBehaviour
     // private bool isHalfLeft, isHalfRight;
     public bool isEasy = false;
     private Rigidbody rig;
-
+    private int cntr = 0;
     private void Awake()
     {
         if (PlayerPrefs.HasKey(PlayerConstants.MoveMode))
         {
             isEasy = PlayerPrefs.GetInt(PlayerConstants.MoveMode) == 0;
+        }
+
+        if (PlayerPrefs.HasKey(PlayerConstants.PositionX) && PlayerPrefs.HasKey(PlayerConstants.PositionY) &&
+            PlayerPrefs.HasKey(PlayerConstants.PositionZ))
+        {
+            var x = PlayerPrefs.GetFloat(PlayerConstants.PositionX);
+            var y = PlayerPrefs.GetFloat(PlayerConstants.PositionY);
+            var z = PlayerPrefs.GetFloat(PlayerConstants.PositionZ);
+            this.transform.SetPositionAndRotation(new Vector3(x, y, z), this.gameObject.transform.rotation);
         }
     }
 
@@ -26,6 +35,14 @@ public class MoveGeneral : MonoBehaviour
 
     private void FixedUpdate()
     {
+        cntr = (++cntr) % 100;
+        if (cntr == 1)
+        {
+            var position = this.transform.position;
+            PlayerPrefs.SetFloat(PlayerConstants.PositionX, position.x);
+            PlayerPrefs.SetFloat(PlayerConstants.PositionY, position.y);
+            PlayerPrefs.SetFloat(PlayerConstants.PositionZ, position.z);
+        }
         if (isEasy)
         {
             EasyMove();
@@ -79,9 +96,9 @@ public class MoveGeneral : MonoBehaviour
             transform.localPosition += -transform.forward * PlayerConstants.speedMove * Time.deltaTime;
         }
 
-        //для поворота при использовании перемещения через transform с moveVector
-        //  moveVector.x = Input.GetAxis("Horizontal") * speedMove;
-        //moveVector.z = Input.GetAxis("Vertical") * speedMove;
+        // для поворота при использовании перемещения через transform с moveVector
+        // moveVector.x = Input.GetAxis("Horizontal") * speedMove;
+        // moveVector.z = Input.GetAxis("Vertical") * speedMove;
 
         //поворот с помощью transform.Rotate
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
