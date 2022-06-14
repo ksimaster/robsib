@@ -12,10 +12,19 @@ public class SliderOut : MonoBehaviour
     public string nameValue;
     public GameObject PanelDead;
 
+    private int cntr = 0;
+
     private void Awake()
     {
         sliderOut.value = sliderOut.maxValue - behindMax;
-        PlayerPrefs.SetFloat(nameValue, sliderOut.value);
+        if (PlayerPrefs.HasKey(nameValue))
+        {
+            sliderOut.value = PlayerPrefs.GetFloat(nameValue);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat(nameValue, sliderOut.value);
+        }
     }
 
     private void Start()
@@ -33,6 +42,7 @@ public class SliderOut : MonoBehaviour
             return;
         }
 
+        SaveProgress();
         if (sliderOut.name == "SliderOut" && (sliderOut.value - sliderOut.minValue) < (sliderSibling.value - sliderSibling.minValue))
         {
             sliderOut.value -= PlayerConstants.SpeedUpFrost;
@@ -44,6 +54,15 @@ public class SliderOut : MonoBehaviour
 
         if (sliderOut.value <= sliderOut.minValue) {
             PanelDead.SetActive(true);
+        }
+    }
+
+    private void SaveProgress()
+    {
+        cntr = (++cntr) % 100;
+        if (cntr == 1)
+        {
+            PlayerPrefs.SetFloat(nameValue, sliderOut.value);
         }
     }
 }

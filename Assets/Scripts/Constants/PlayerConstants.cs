@@ -28,4 +28,6 @@ public static class PlayerConstants
     public const string PositionZ = "PositionZ";
 
     public const string Camera = "Camera";
+    public const string Fuel = "Fuel";
+    public const string FuelInCar = "FuelInCar";
 }

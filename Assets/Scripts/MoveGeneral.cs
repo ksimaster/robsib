@@ -35,14 +35,7 @@ public class MoveGeneral : MonoBehaviour
 
     private void FixedUpdate()
     {
-        cntr = (++cntr) % 100;
-        if (cntr == 1)
-        {
-            var position = this.transform.position;
-            PlayerPrefs.SetFloat(PlayerConstants.PositionX, position.x);
-            PlayerPrefs.SetFloat(PlayerConstants.PositionY, position.y);
-            PlayerPrefs.SetFloat(PlayerConstants.PositionZ, position.z);
-        }
+        SaveProgress();
         if (isEasy)
         {
             EasyMove();
@@ -204,5 +197,17 @@ public class MoveGeneral : MonoBehaviour
         }
         */
         #endregion [Ќаработки передвижений и поворотов]
+    }
+
+    private void SaveProgress()
+    {
+        cntr = (++cntr) % 100;
+        if (cntr == 1)
+        {
+            var position = this.transform.position;
+            PlayerPrefs.SetFloat(PlayerConstants.PositionX, position.x);
+            PlayerPrefs.SetFloat(PlayerConstants.PositionY, position.y);
+            PlayerPrefs.SetFloat(PlayerConstants.PositionZ, position.z);
+        }
     }
 }
