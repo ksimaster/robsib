@@ -20,8 +20,8 @@ public static class PlayerConstants
     // Movement
     public const string MoveMode = "MoveMode";
 
-    public const float speedMove = 5f;
-    public const float turnSpeed = 100f;
+    public const float speedMove = 7f;
+    public const float turnSpeed = 150f;
 
     public const string PositionX = "PositionX";
     public const string PositionY = "PositionY";

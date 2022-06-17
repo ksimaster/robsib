@@ -8,19 +8,41 @@
     <link rel="stylesheet" href="TemplateData/style.css">
 	<script src="https://yandex.ru/games/sdk/v2"></script>
 	<script>
-		function showAdv() {
-			console.log('show Adv');
-			if (!!window.ysdk) {
-				ysdk.adv.showFullscreenAdv();
-			}
-		}
-		
 		YaGames
 		.init()
 		.then(ysdk => {
 			console.log('Yandex SDK initialized');
 			window.ysdk = ysdk;
 		});
+		
+			//	function showAdv() {
+			//console.log('show Adv');
+			//if (!!window.ysdk) {
+			//	ysdk.adv.showFullscreenAdv();
+			//}
+
+		//}
+	</script>
+	<script>
+      //show ads on start game
+      showAdInterstitial();
+      //vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data =>{console.log(data);});
+    //add ksimaster
+    function showAdInterstitial() {
+          sdk.adv.showFullscreenAdv({
+      callbacks: {
+        onClose: function (wasShown) {
+          unityInstance.SendMessage('YandexSDK', 'OnInterstitialShown');
+        },
+        onError: function (error) {
+          unityInstance.SendMessage('YandexSDK', 'OnInterstitialFailed', error);
+        }
+      }
+    })
+    }
+    function showAdReward() {
+      vkBridge.send("VKWebAppShowNativeAds", {ad_format:"reward"}).then(data => console.log(data.result)).catch(error => console.log(error));
+    }
 	</script>
   </head>
   <body>
