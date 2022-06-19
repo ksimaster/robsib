@@ -29,19 +29,31 @@
       //vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data =>{console.log(data);});
     //add ksimaster
     function showAdInterstitial() {
-          sdk.adv.showFullscreenAdv({
-      callbacks: {
-        onClose: function (wasShown) {
-          unityInstance.SendMessage('YandexSDK', 'OnInterstitialShown');
-        },
-        onError: function (error) {
-          unityInstance.SendMessage('YandexSDK', 'OnInterstitialFailed', error);
-        }
+    	console.log('show Ad Interstitial');
+    	if (!!window.ysdk) {
+          sdk.adv.showFullscreenAdv();
       }
-    })
     }
     function showAdReward() {
-      vkBridge.send("VKWebAppShowNativeAds", {ad_format:"reward"}).then(data => console.log(data.result)).catch(error => console.log(error));
+      if (!!window.ysdk) {
+          sdk.adv.showRewadedVideo({
+          	callbacks: {
+          		onOpen: () => {
+          			console.log('Video ad open');
+          		},
+          		onRewarded: () =>{
+          			console.log('Rewarded!');
+          		},
+          		onClose: () =>{
+          			console.log('Video ad closed');
+          		},
+          		onError: () =>{
+          			console.log('Error while open video ad:', e);
+          		}
+
+          	}
+          });
+      }
     }
 	</script>
   </head>

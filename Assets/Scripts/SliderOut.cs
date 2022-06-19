@@ -11,6 +11,8 @@ public class SliderOut : MonoBehaviour
 
     public string nameValue;
     public GameObject PanelDead;
+    public GameObject PanelStart;
+    public GameObject PanelMessage;
 
     private int cntr = 0;
 
@@ -54,6 +56,8 @@ public class SliderOut : MonoBehaviour
 
         if (sliderOut.value <= sliderOut.minValue) {
             PanelDead.SetActive(true);
+            PanelStart.SetActive(false);
+            PanelMessage.SetActive(false);
         }
     }
 
