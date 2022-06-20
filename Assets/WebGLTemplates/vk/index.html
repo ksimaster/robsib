@@ -12,10 +12,14 @@
 	  vkBridge.send('VKWebAppInit');
     </script>	
     <script>
-      //show ads on start game
-      showAdInterstitial();
       //vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data =>{console.log(data);});
     //add ksimaster
+        function wallPost() {
+          vkBridge.send("VKWebAppShowWallPostBox", {
+          "message": "Я тут помогаю Михалычу выжить в мороз! Присоединяйся ко мне!",
+          "attachments": "https://vk.com/app8190493"
+        });
+    }
     function showShare() {
       window.vkBridge.send("VKWebAppShowInviteBox",{}).then(t=>console.log(t.success)).catch(t=>console.log(t))
     }

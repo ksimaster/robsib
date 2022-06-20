@@ -14,6 +14,10 @@ public class VKScript : MonoBehaviour
     public void ShareFriend(){
     	WebGLPluginJS.ShareFunction();
     }
+    public void WallPost()
+    {
+        WebGLPluginJS.WallPostFunction();
+    }
 
     public void ShowAdInterstitial(){
     	WebGLPluginJS.InterstitialFunction();

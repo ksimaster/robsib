@@ -9,6 +9,11 @@ mergeInto(LibraryManager.library, {
       // Show a message as an alert
       window.showShare();
    },
+      // Function WallPost (add ksimaster)
+   WallPostFunction: function () {
+      // Show a message as an alert
+      window.wallPost();
+   },
    // Function InterstitialFunction (add ksimaster)
    InterstitialFunction: function () {
       // Show a message as an alert
