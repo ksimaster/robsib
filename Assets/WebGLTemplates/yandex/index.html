@@ -7,57 +7,56 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 	<script src="https://yandex.ru/games/sdk/v2"></script>
-	<script>
-		YaGames
-		.init()
-		.then(ysdk => {
-			console.log('Yandex SDK initialized');
-			window.ysdk = ysdk;
-		});
-		
-			//	function showAdv() {
-			//console.log('show Adv');
-			//if (!!window.ysdk) {
-			//	ysdk.adv.showFullscreenAdv();
-			//}
 
-		//}
-	</script>
-	<script>
+  
+    <!--
+   <script>
       //show ads on start game
       showAdInterstitial();
-      //vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data =>{console.log(data);});
+      
     //add ksimaster
     function showAdInterstitial() {
-    	console.log('show Ad Interstitial');
-    	if (!!window.ysdk) {
-          sdk.adv.showFullscreenAdv();
+      console.log('show Ad Interstitial');
+      if (!!window.ysdk) {
+          ysdk.adv.showFullscreenAdv();
       }
     }
+    
     function showAdReward() {
       if (!!window.ysdk) {
-          sdk.adv.showRewadedVideo({
-          	callbacks: {
-          		onOpen: () => {
-          			console.log('Video ad open');
-          		},
-          		onRewarded: () =>{
-          			console.log('Rewarded!');
-          		},
-          		onClose: () =>{
-          			console.log('Video ad closed');
-          		},
-          		onError: () =>{
-          			console.log('Error while open video ad:', e);
-          		}
+          ysdk.adv.showRewadedVideo({
+            callbacks: {
+              onOpen: () => {
+                console.log('Video ad open');
+              },
+              onRewarded: () =>{
+                console.log('Rewarded!');
+              },
+              onClose: () =>{
+                console.log('Video ad closed');
+              },
+              onError: () =>{
+                console.log('Error while open video ad:', e);
+              }
 
-          	}
+            }
           });
       }
     }
-	</script>
+    </script>
+  -->
   </head>
   <body>
+      <script>
+    
+    
+      YaGames.init()
+      .then(ysdk => {
+        console.log('Yandex SDK initialized');
+        ysdk.adv.showFullscreenAdv();
+        window.ysdk = ysdk;
+      });
+    </script>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}}></canvas>
       <div id="unity-loading-bar">
