@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.27466637, g: 0.2692443, b: 0.28319085, a: 1}
+  m_IndirectSpecularColor: {r: 0.27466625, g: 0.26924428, b: 0.28319097, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9210,7 +9210,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 0.8627451, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.61960787, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.8536848, g: 1, b: 0, a: 1}
     m_ColorMultiplier: 1
@@ -37346,6 +37346,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773875143915326967, guid: a7eeb562e2cf1464f975b45ed9eead4f,
         type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.61960787
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773875143915326967, guid: a7eeb562e2cf1464f975b45ed9eead4f,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773875143915326967, guid: a7eeb562e2cf1464f975b45ed9eead4f,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773875143915326967, guid: a7eeb562e2cf1464f975b45ed9eead4f,
+        type: 3}
       propertyPath: m_Colors.m_DisabledColor.a
       value: 1
       objectReference: {fileID: 0}
@@ -37615,6 +37630,21 @@ PrefabInstance:
     - target: {fileID: 3773875144630262467, guid: a7eeb562e2cf1464f975b45ed9eead4f,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773875144630262467, guid: a7eeb562e2cf1464f975b45ed9eead4f,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.61960787
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773875144630262467, guid: a7eeb562e2cf1464f975b45ed9eead4f,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773875144630262467, guid: a7eeb562e2cf1464f975b45ed9eead4f,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3773875144630262467, guid: a7eeb562e2cf1464f975b45ed9eead4f,
