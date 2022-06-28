@@ -31,7 +31,7 @@ public class SwitchCamScript : MonoBehaviour
     private void SwitchCamera(int newId)
     {
         cameraId = newId;
-        if (cameraId > 7)
+        if (cameraId > 10)
         {
             cameraId = 0;
         }
