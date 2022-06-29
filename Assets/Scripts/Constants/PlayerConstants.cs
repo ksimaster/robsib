@@ -2,7 +2,7 @@ public static class PlayerConstants
 {
     public const string IsEducationComplete = "IsEducationComplete";
 
-    public const float SpeedFrost = 0.013f;
+    public const float SpeedFrost = 0.011f;
     public const float SpeedUpFrost = 0.25f;
 
     public const float FuelSpendIdle = 0.0001f;
