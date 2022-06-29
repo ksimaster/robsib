@@ -14,7 +14,7 @@ public class PressButtonC : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.C)) 
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.X)) 
         {
             StopCoroutine(VisibilityText());
             gameObject.SetActive(false);

@@ -1443,7 +1443,7 @@ GameObject:
   - component: {fileID: 53774189}
   - component: {fileID: 53774188}
   m_Layer: 5
-  m_Name: TextPressC
+  m_Name: TextPressC_X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
