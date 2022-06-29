@@ -9763,6 +9763,8 @@ GameObject:
   - component: {fileID: 519080034}
   - component: {fileID: 519080037}
   - component: {fileID: 519080038}
+  - component: {fileID: 519080040}
+  - component: {fileID: 519080039}
   m_Layer: 5
   m_Name: PanelSurvivalToReward
   m_TagString: Untagged
@@ -9841,7 +9843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9be0cfb11f1c04197651d750669f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelToClose: {fileID: 1805889443}
+  otherObject: {fileID: 1805889443}
 --- !u!114 &519080038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9854,7 +9856,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9be0cfb11f1c04197651d750669f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelToClose: {fileID: 1188070446}
+  otherObject: {fileID: 1188070446}
+--- !u!114 &519080039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519080033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92cfe21e0cf7244a80762f209c15745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherObject: {fileID: 1194155946}
+--- !u!114 &519080040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519080033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9be0cfb11f1c04197651d750669f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherObject: {fileID: 1194155946}
 --- !u!1 &531587123
 GameObject:
   m_ObjectHideFlags: 0
@@ -38672,6 +38700,8 @@ GameObject:
   - component: {fileID: 2104886353}
   - component: {fileID: 2104886355}
   - component: {fileID: 2104886356}
+  - component: {fileID: 2104886358}
+  - component: {fileID: 2104886357}
   m_Layer: 5
   m_Name: Panel_death
   m_TagString: Untagged
@@ -38752,7 +38782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9be0cfb11f1c04197651d750669f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelToClose: {fileID: 1805889443}
+  otherObject: {fileID: 1805889443}
 --- !u!114 &2104886356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38765,7 +38795,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9be0cfb11f1c04197651d750669f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelToClose: {fileID: 1188070446}
+  otherObject: {fileID: 1188070446}
+--- !u!114 &2104886357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104886351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92cfe21e0cf7244a80762f209c15745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherObject: {fileID: 1194155946}
+--- !u!114 &2104886358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104886351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9be0cfb11f1c04197651d750669f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherObject: {fileID: 1194155946}
 --- !u!1 &2106486268
 GameObject:
   m_ObjectHideFlags: 0
