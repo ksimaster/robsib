@@ -14,13 +14,16 @@ public class ADScript : MonoBehaviour
     public void ShareFriend(){
     	WebGLPluginJS.ShareFunction();
     }
-
+#if UNITY_WEBGL && !UNITY_EDITOR
     public void ShowAdInterstitial(){
     	WebGLPluginJS.InterstitialFunction();
     }
+#endif
+#if UNITY_WEBGL && !UNITY_EDITOR
     public void ShowAdReward(){
     	WebGLPluginJS.RewardFunction();
     	sliderHome.value += rewardBonusSliderHome;
     	if(sliderFuelCar.value<=lowBalanceFuel) sliderFuelCar.value += rewardBonusSliderFuel;
     }
+#endif
 }
