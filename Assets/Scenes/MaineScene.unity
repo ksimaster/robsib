@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.27466637, g: 0.2692443, b: 0.28319085, a: 1}
+  m_IndirectSpecularColor: {r: 0.27466625, g: 0.26924428, b: 0.28319097, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -400,8 +400,8 @@ MonoBehaviour:
   behindMax: 10
   nameValue: Warm
   PanelDead: {fileID: 2104886351}
-  PanelStart: {fileID: 0}
-  PanelMessage: {fileID: 0}
+  PanelStart: {fileID: 1805889443}
+  PanelMessage: {fileID: 1188070446}
 --- !u!114 &17496944
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 public class SwitchCamScript : MonoBehaviour
 {
     public Camera cam1;
-    public GameObject[] points = new GameObject[8];
+    public GameObject[] points;
     private int cameraId = 0;
 
     private void Awake()
@@ -19,6 +19,11 @@ public class SwitchCamScript : MonoBehaviour
         {
             SwitchCamera(cameraId + 1);
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            SwitchCamera(cameraId - 1);
+        }
     }
 
     public void PointCamera(GameObject point)
@@ -31,11 +36,16 @@ public class SwitchCamScript : MonoBehaviour
     private void SwitchCamera(int newId)
     {
         cameraId = newId;
-        if (cameraId > 12)
+        if (cameraId > points.Length)
         {
             cameraId = 0;
         }
-        
+
+        if (cameraId < 0)
+        {
+            cameraId = points.Length - 1;
+        }
+
         PointCamera(points[cameraId]);
         PlayerPrefs.SetInt(PlayerConstants.Camera, cameraId);
         Debug.Log("Включена камера " + cameraId);

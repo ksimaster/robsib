@@ -15,7 +15,6 @@ public class PanelDeath : MonoBehaviour
     {
         DeletePrefs();
         SceneManager.LoadScene("MaineScene");
-        Time.timeScale = 1f;
     }
 
 
