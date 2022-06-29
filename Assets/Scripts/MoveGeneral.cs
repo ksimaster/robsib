@@ -12,6 +12,7 @@ public class MoveGeneral : MonoBehaviour
     private Rigidbody rig;
     private int cntr = 0;
     private Vector3 prevPosition;
+    private float power = 1f;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class MoveGeneral : MonoBehaviour
     {
         rig = GetComponent<Rigidbody>();
         prevPosition = transform.localPosition + transform.localPosition * 0;
+        power = 1;
     }
 
     private void FixedUpdate()
@@ -95,24 +97,13 @@ public class MoveGeneral : MonoBehaviour
         }
         
         var prevMove = transform.localPosition - prevPosition;
-        var horizontalMove = Math.Sqrt(move.x * move.x + move.z * move.z);
-        var prevHorizontalMove = Math.Sqrt(prevMove.x * prevMove.x + prevMove.z * prevMove.z);
-        var verticalMove = prevMove.y;
-        if (verticalMove > 2 * prevHorizontalMove && verticalMove > 0.03 && horizontalMove == 0) {
-            var backWay = prevPosition - transform.localPosition;
-            var margin = 0f;
-            var correlation = (move.x * backWay.x + move.z * backWay.z) / Math.Sqrt(move.x * move.x + move.z * move.z + 1e-6) / Math.Sqrt(backWay.x * backWay.x + backWay.z * backWay.z + 1e-6);
-            correlation += margin;
-            correlation = (Math.Abs(correlation) + correlation) / 2; // Обнуляем все что меньше -0.2
-            correlation = Math.Sqrt(correlation / (1 + margin));
-            move = move * (float)correlation;
-        }
-        else
-        {
-            prevPosition = transform.localPosition + transform.localPosition * 0;
-        }
-
-        transform.localPosition += move;
+        var horizontalMoveSqr = prevMove.x * prevMove.x + prevMove.z * prevMove.z;
+        var verticalMove = (Math.Abs(prevMove.y) + prevMove.y) / 2;
+        prevPosition = transform.localPosition + transform.localPosition * 0;
+        var stepPower = (float)((1e-6 + horizontalMoveSqr) / (1e-5 + horizontalMoveSqr + 8 * verticalMove * verticalMove)); ;
+        var alpha = 0.9f;
+        power = (1 - alpha) * power + alpha * stepPower;
+        transform.localPosition += move * power;
         // для поворота при использовании перемещения через transform с moveVector
         // moveVector.x = Input.GetAxis("Horizontal") * speedMove;
         // moveVector.z = Input.GetAxis("Vertical") * speedMove;
