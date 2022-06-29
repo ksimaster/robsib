@@ -95,9 +95,10 @@ public class MoveGeneral : MonoBehaviour
         }
         
         var prevMove = transform.localPosition - prevPosition;
-        var horizontalMove = Math.Sqrt(prevMove.x * prevMove.x + prevMove.z * prevMove.z);
+        var horizontalMove = Math.Sqrt(move.x * move.x + move.z * move.z);
+        var prevHorizontalMove = Math.Sqrt(prevMove.x * prevMove.x + prevMove.z * prevMove.z);
         var verticalMove = prevMove.y;
-        if (verticalMove/ horizontalMove > 2 && verticalMove > 0.03) {
+        if (verticalMove > 2 * prevHorizontalMove && verticalMove > 0.03 && horizontalMove == 0) {
             var backWay = prevPosition - transform.localPosition;
             var margin = 0f;
             var correlation = (move.x * backWay.x + move.z * backWay.z) / Math.Sqrt(move.x * move.x + move.z * move.z + 1e-6) / Math.Sqrt(backWay.x * backWay.x + backWay.z * backWay.z + 1e-6);
@@ -105,7 +106,7 @@ public class MoveGeneral : MonoBehaviour
             correlation = (Math.Abs(correlation) + correlation) / 2; // Обнуляем все что меньше -0.2
             correlation = Math.Sqrt(correlation / (1 + margin));
             move = move * (float)correlation;
-        } 
+        }
         else
         {
             prevPosition = transform.localPosition + transform.localPosition * 0;
