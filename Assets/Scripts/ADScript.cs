@@ -24,8 +24,10 @@ public class ADScript : MonoBehaviour
     }
 
     public void ShowAdReward(){
+#if UNITY_WEBGL && !UNITY_EDITOR
     	WebGLPluginJS.RewardFunction();
-    	sliderHome.value += rewardBonusSliderHome;
+#endif
+        sliderHome.value += rewardBonusSliderHome;
     	if(sliderFuelCar.value<=lowBalanceFuel) sliderFuelCar.value += rewardBonusSliderFuel;
     }
 }
