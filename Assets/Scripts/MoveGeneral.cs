@@ -11,6 +11,8 @@ public class MoveGeneral : MonoBehaviour
     public bool isEasy = false;
     private Rigidbody rig;
     private int cntr = 0;
+    private Vector3 prevPosition;
+
     private void Awake()
     {
         if (PlayerPrefs.HasKey(PlayerConstants.MoveMode))
@@ -31,6 +33,7 @@ public class MoveGeneral : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody>();
+        prevPosition = transform.localPosition + transform.localPosition * 0;
     }
 
     private void FixedUpdate()
@@ -80,15 +83,35 @@ public class MoveGeneral : MonoBehaviour
 
     private void EasyMove()
     {
+        var move = new Vector3(0, 0, 0);
+
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.localPosition += transform.forward * PlayerConstants.speedMove * Time.deltaTime;
+            move = transform.forward * PlayerConstants.speedMove * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.localPosition += -transform.forward * PlayerConstants.speedMove * Time.deltaTime;
+            move = -transform.forward * PlayerConstants.speedMove * Time.deltaTime;
+        }
+        
+        var prevMove = transform.localPosition - prevPosition;
+        var horizontalMove = Math.Sqrt(prevMove.x * prevMove.x + prevMove.z * prevMove.z);
+        var verticalMove = prevMove.y;
+        if (verticalMove/ horizontalMove > 1) {
+            var backWay = prevPosition - transform.localPosition;
+            var margin = 0f;
+            var correlation = (move.x * backWay.x + move.z * backWay.z) / Math.Sqrt(move.x * move.x + move.z * move.z + 1e-6) / Math.Sqrt(backWay.x * backWay.x + backWay.z * backWay.z + 1e-6);
+            correlation += margin;
+            correlation = (Math.Abs(correlation) + correlation) / 2; // Обнуляем все что меньше -0.2
+            correlation = Math.Sqrt(correlation / (1 + margin));
+            move = move * (float)correlation;
+        } 
+        else
+        {
+            prevPosition = transform.localPosition + transform.localPosition * 0;
         }
 
+        transform.localPosition += move;
         // для поворота при использовании перемещения через transform с moveVector
         // moveVector.x = Input.GetAxis("Horizontal") * speedMove;
         // moveVector.z = Input.GetAxis("Vertical") * speedMove;
@@ -103,6 +126,8 @@ public class MoveGeneral : MonoBehaviour
         {
             transform.Rotate(Vector3.up, PlayerConstants.turnSpeed * Time.deltaTime);
         }
+
+        // transform.localPosition.Set(transform.localPosition.x, transform.localPosition.y - rig.drag, transform.localPosition.z);
         #region [Наработки передвижений и поворотов]
         //поворот персонажа
         /*
