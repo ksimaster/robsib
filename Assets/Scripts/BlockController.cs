@@ -57,7 +57,7 @@ public class BlockController : MonoBehaviour
 
         for (var cntr = 0; cntr < 100; cntr++)
         {
-            var blockIdList = BlocksList.OrderBy(x => Guid.NewGuid()).Take(BlocksCount).ToList();
+            var blockIdList = BlocksList.Skip(1).OrderBy(x => Guid.NewGuid()).Take(BlocksCount).ToList();
             for (var i = 0; i < VertexesCount; i++)
             {
                 foreach (var j in ConnectionList[i])
