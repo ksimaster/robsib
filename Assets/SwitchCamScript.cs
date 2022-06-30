@@ -36,7 +36,7 @@ public class SwitchCamScript : MonoBehaviour
     private void SwitchCamera(int newId)
     {
         cameraId = newId;
-        if (cameraId > points.Length)
+        if (cameraId >= points.Length)
         {
             cameraId = 0;
         }
