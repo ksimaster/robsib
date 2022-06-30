@@ -17210,6 +17210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5493465911948706283, guid: 503eafa8926b374478b519ecfe3cdf41,
         type: 3}
+      propertyPath: minCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493465911948706283, guid: 503eafa8926b374478b519ecfe3cdf41,
+        type: 3}
       propertyPath: collectButton
       value: 
       objectReference: {fileID: 0}
@@ -39939,6 +39944,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AngularDrag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493465911948706283, guid: 503eafa8926b374478b519ecfe3cdf41,
+        type: 3}
+      propertyPath: minCount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5493465911948706283, guid: 503eafa8926b374478b519ecfe3cdf41,
         type: 3}
