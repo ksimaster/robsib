@@ -13,14 +13,15 @@ public class SliderFuelCar : MonoBehaviour
     private void Awake()
     {
         slider.value = slider.maxValue - behindMax;
-    }
-
-    private void Start()
-    {
         slider.onValueChanged.AddListener((v) =>
         {
             sliderText.text = v.ToString("0.00");
         });
+    }
+
+    private void Start()
+    {
+
     }
 
     void FixedUpdate()
