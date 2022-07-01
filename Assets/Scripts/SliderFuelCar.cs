@@ -7,6 +7,7 @@ public class SliderFuelCar : MonoBehaviour
     public Text sliderText;
     public float behindMax;
     public float deadValue;
+    public GameObject panelDeath;
     private float fuelSpendSpeed = PlayerConstants.FuelSpendIdle;
 
     private void Awake()
@@ -25,6 +26,12 @@ public class SliderFuelCar : MonoBehaviour
     void FixedUpdate()
     {
         slider.value -= fuelSpendSpeed;
-        if (slider.value <= deadValue) Debug.Log("Остановить машину");
+        if (slider.value <= deadValue)
+        {
+            Debug.Log("Кончилось топливо");
+            Time.timeScale = 0;
+            panelDeath.SetActive(true);
+        }
+            
     }
 }
