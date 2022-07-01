@@ -30,4 +30,9 @@ public class ADScript : MonoBehaviour
         sliderHome.value += rewardBonusSliderHome;
     	if(sliderFuelCar.value<=lowBalanceFuel) sliderFuelCar.value += rewardBonusSliderFuel;
     }
+
+    private void Update()
+    {
+        if (sliderHome.value <= sliderHome.minValue) ShowAdInterstitial();
+    }
 }
